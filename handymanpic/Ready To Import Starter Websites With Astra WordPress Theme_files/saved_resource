@@ -1,0 +1,1414 @@
+/* Enter Your Custom CSS Here */
+.black-friday-review-rating p {
+    margin-bottom: 15px;
+}
+.real-user-review {
+    font-size: 18px;
+    margin-bottom: 5px !important;
+    text-align: center;
+}
+#cp_text-1-29476 .cp-form-input-field {
+	color:#000000;
+}
+/* IE Header Logo CSS Start */
+.internet-explorer.internet-explorer11 #masthead .site-logo-img img {
+	max-width: none !important;
+  width:auto !important;
+}
+/* IE Header Logo CSS End */
+/* Post heading CSS Start */
+.astra-custom-post-heading {
+    font-size: 20px;
+    line-height: 1.4;
+    color: #5741d9;
+    margin-bottom: 20px;
+}
+.astra-custom-post-heading-steps {
+    margin-bottom: 1.1em;
+}
+/* Post heading CSS End */
+/* Doc Lightbox CSS Start */
+#slb_viewer_wrap .slb_theme_slb_baseline .slb_container {
+    background-color: transparent !important;
+}
+#slb_viewer_wrap .slb_theme_slb_baseline .slb_template_tag_item_content>* {
+    background: #ffffff !important;
+}
+#slb_viewer_wrap .slb_theme_slb_default .slb_container {
+    box-shadow: none !important;
+}
+#slb_viewer_wrap .slb_theme_slb_default .slb_content {
+    margin: 0 auto;
+}
+/* Doc Lightbox CSS End */
+/* Pricing Page Featured Template Image CSS */
+.products-display-infobox .uabb-photo-content  {
+  -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.08);
+  -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.08);
+  box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.08);
+}
+/* Pricing Page Featured Template Image CSS End */
+/* Custom Portfolio Page CSS Start */
+#TB_window .tb-close-icon, 
+#TB_window .responsive-view .actions a {
+    color: #c5c5c5 !important;
+}
+.astra-custom-portfolio-section .uabb-banner-style11 {
+    box-shadow: 0 0 13px 0 rgba(0,0,0,.11);
+}
+.astra-custom-portfolio-section .uabb-banner-style11:hover {
+    box-shadow: 0px 22px 30px -5px rgba(0, 0, 0, 0.1);
+}
+.astra-custom-portfolio-section .uabb-ib1-title {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+}
+/* Custom Portfolio Page CSS End */
+/* Contribute Page CSS Start */
+.contribute-form-section .wpcf7-form {
+    border: none;
+    background: #ffffff;
+}
+.contribute-form-section .article-common-title {
+    background-color: #ffffff;
+    display: inline-block;
+    font-weight: 400;
+    top: calc(0% + 30px);
+    left: 15px;
+    margin-top: -45px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    position: absolute;
+    text-transform: none;
+}
+.contribute-form-section .article-details {
+    border: 1px solid #eeeeee;
+    padding: 30px 30px 0px 30px;
+    position: relative;
+    margin-bottom: 50px;
+}
+.contributor-information {
+    position: relative;
+}
+.contributor-information {
+    border: 1px solid #eeeeee;
+    padding: 30px;
+    position: relative;
+    margin-top: 50px;
+}
+.contribute-form-section input, 
+.contribute-form-section textarea {
+    border-left: 4px solid #8952e9 !important;
+}
+.contribute-form-section .wpcf7-submit {
+    border: none !important; 
+}
+.contribute-form-section .wpcf7-file {
+    border: none !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    display: inline-block !important;
+    width: auto !important;
+}
+.contributor-file-upload {
+    display: inline-block !important;
+    width: auto;
+}
+.contribute-form-section .wpcf7-mail-sent-ok {
+    border-color: #85bf31 !important;
+    display: block;
+    margin: 0;
+    text-align: center;
+}
+.contribute-form-section .wpcf7-validation-errors {
+    display: block;
+    margin: 0;
+    text-align: center;
+}
+.guideline-section {
+    box-shadow: 0px 0px 80px 0px rgba(0,0,0,0.13);
+    border-radius: .380rem;
+    background: #fff;
+    position: relative;
+}
+.con-required-field {
+    color: #790000;
+}
+/* Contribute Page CSS End  */
+/* NEW CTA CSS Start */
+.uabb-button.uabb-creative-button:focus {
+    outline: none;
+}
+.pricing-new-cta {
+    display: flex;
+    justify-content: center;
+}
+/* NEW CTA CSS End */
+/* Testmonial Slider CSS Start */
+.pricing-testimonial-img {
+    border-radius: 100%;
+}
+.pricing-testimonial-author {
+    font-weight: 700 !important;
+}
+.pricing-testimonial-main-left-side, 
+.pricing-testimonial-main-right-side {
+    display: inline-block;
+    width: calc( 50% - 15px);
+    float: left;
+    margin-right: 30px !important;
+}
+.pricing-testimonial-main-right-side {
+    margin-right: 0px !important;
+    margin-top: 3.75rem !important;
+}
+.pricing-testimonial-left-img-section,
+.pricing-testimonial-right-img-section
+{
+    display: inline-block;
+    width: 15%;
+    float: left;
+    margin-top: 6rem !important;
+}
+.pricing-testimonial-left-details-section,
+.pricing-testimonial-right-details-section
+{
+    display: inline-block;
+    width: calc(85% - 30px);
+    margin-left: 30px !important;
+    text-align: left;
+}
+.pricing-testimonial-left-details,
+.pricing-testimonial-right-details
+{
+    background-color: #6948de;
+    color: #ffffff !important;
+    padding: 20px;
+    margin-bottom: 20px !important;
+    border-radius: 10px 0;
+    position: relative;
+    font-size: 16px !important;
+}
+.pricing-testimonial-right-details {
+    border-radius: 0 10px;
+}
+.pricing-testimonial-left-authorinfo,
+.pricing-testimonial-right-authorinfo
+{
+    text-align: center;
+}
+.pricing-testimonial-left-details:after,
+.pricing-testimonial-right-details:after
+{
+    right: 100%;
+    top: 100%;
+    margin: -20px -10px 0 0;
+    border: solid transparent;
+    content: '';
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: transparent;
+    border-right-color: #6948de;
+    border-width: 10px;
+    transform: rotate(90deg);
+}
+.pricing-testimonial-right-details:after {
+    right: auto;
+    left: 100%;
+    margin: -20px 0 0 -10px;
+    transform: rotate(90deg);
+}
+.pricing-testimonial-right-img-section {
+    float: right;
+}
+.pricing-testimonial-right-details-section {
+    margin-left: 0px !important;
+    margin-right: 30px !important;
+}
+/* Testmonial Slider CSS End */
+/* Pricing Page CSS Start */
+.uabb-custom-pricing-column .fl-col-content {
+    border-radius: 6px;
+}
+.pro-row2,
+.pro-row3,
+.pro-row4,
+.astra-pro-row2 {
+    display: none;
+    transition: all linear 2000ms;
+}
+.pro-btn-row2,
+.pro-btn-row3,
+.pro-btn-row4,
+.astra-pro-row2-visible {
+    display: block;
+    transition: all linear 2000ms;
+}
+/* NEW CTA CSS End*/
+/* New Tooltip CSS Start */
+.tooltipster-sidetip.tooltipster-left .tooltipster-box {
+    margin-right: 25px;
+}
+.tooltipster-sidetip.tooltipster-left .tooltipster-arrow {
+    width: 25px;
+}
+.pricing-page-second .uabb-list-icon-wrap {
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+}
+.tooltipster-sidetip .tooltipster-content {
+    max-width: 340px;
+    font-size: 14px;
+    line-height: 24px;
+    box-shadow: none;
+    font-family: Poppins;
+    background-color:#20292f;
+    color:#ffffff;
+    position: relative;
+    padding: 20px;
+    font-size: inherit;
+    text-align: left;
+    font-weight: normal;
+    line-height: inherit;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    -moz-box-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+/*.tooltipster-fade.tooltipster-show */
+.tooltipster-sidetip .tooltipster-box {
+    background: #565656;
+    border: none !important;;
+    border-radius: 4px;
+    box-shadow: 0px 5px 20px rgba(25, 31, 35, 0.23);
+    -moz-box-shadow: 0px 5px 20px rgba(25, 31, 35, 0.23);
+    -webkit-box-shadow: 0px 5px 20px rgba(25, 31, 35, 0.23);
+}
+.tooltip.tooltipstered {
+    display: block;
+}
+.tooltipster-sidetip .tooltipster-content
+{
+    box-shadow: none !important;
+    text-align: right;
+}
+.tooltipster-sidetip.tooltipster-left .tooltipster-arrow-border {
+    border-left-color: #20292f !important;
+}
+.tooltipster-sidetip.tooltipster-left .tooltipster-arrow-background {
+    border-left-color: #20292f !important;
+}
+.tooltip.tooltipstered,
+.tooltip-left.tooltipstered {
+    display: inline-block !important;
+    cursor: pointer;
+}
+.tooltipster-base.tooltipster-fade.tooltipster-show {
+    margin-left: 10px !important;
+}
+.tooltipster-sidetip .tooltipster-content {
+    max-width: 380px !important;
+    background-color: #20292f !important;
+}
+.tooltipster-sidetip.tooltipster-right .tooltipster-arrow-background {
+    border-right-color: #20292f !important;
+}
+.tooltipster-sidetip .tooltipster-content {
+    box-shadow: none;
+    text-align: left !important;
+}
+.tooltipster-base.tooltipster-fade.tooltipster-show.tooltipster-left {
+    margin-right: 10px !important;
+    margin-left: 0 !important;
+}
+.tooltipster-sidetip.tooltipster-left .tooltipster-box {
+    margin-right: 40px !important;
+}
+.tooltipster-sidetip.tooltipster-left .tooltipster-arrow {
+    width: 40px !important;
+}
+/* New Tooltip CSS Start  */
+.agency-btn,
+.mini-agency-btn,
+#astra-bb-bundle:focus, 
+#astra-uabb-bundle:focus {
+	outline: none;
+}
+
+.agency-btn .uabb-button.uabb-creative-button,
+.mini-agency-btn .uabb-button.uabb-creative-button {
+    display: inline-block;
+    min-height: auto;
+}
+#bundle-outer-uabb-radio, 
+#bundle-outer-uael-radio {
+    margin-bottom: 25px;
+    color: #41495b;
+    margin-right: 6px !important;
+    line-height: 1em;
+}
+.custom-pricing-uabb-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    opacity: 0;
+    background: rgba(0,0,0,0.60);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+#astra-bb-regular,
+#modal-astra-bb-regular,
+#astra-bb-bundled 
+{
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 50px;
+    text-transform: none;
+    letter-spacing: 0.6px;
+    border-radius: 80px;
+    -moz-border-radius: 80px;
+    -webkit-border-radius: 80px;
+    width: 234px;
+    min-height: 50px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background: transparent;
+    color: #8952e9;
+    border: 2px solid #7940de;
+}
+#astra-bb-regular:hover,
+#modal-astra-bb-regular:hover,
+#astra-bb-bundled:hover
+{
+    background-color: #8952e9;
+    color: #ffffff;
+}
+.popup-opened .custom-pricing-uabb-overlay {
+    visibility: visible;
+    opacity: 1;
+}
+.modal-popup-radio-button-section {
+    display: none;
+}
+.error-message-popup {
+    display: block !important;
+    text-align: center;
+    position: fixed !important;
+    padding: 20px 60px 30px 60px !important;
+    width: 450px;
+    height: auto !important;
+    background-color: #ffffff !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    animation-name: zoomIn;
+    animation-duration: 0.3s;
+    top: auto;
+    z-index: 99999;
+    top: 50% !important;
+    border-radius: 10px;
+    box-shadow: 0 0 50px 0 rgba(0,0,0,.38);
+}
+.close {
+    position: absolute;
+    top: -18px;
+    right: -30px;
+    line-height: 0.7em;
+    font-size: 50px;
+    opacity: 1;
+    color: #ffffff;
+    cursor: pointer;
+}
+.closeimage {
+    animation-name: zoomOut;
+    animation-duration: 0.3s;
+}
+.option-modal-popup-selection {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.6em;
+    padding-bottom: 0px;
+    padding-top: 15px;
+    padding: 10px 20px 7px 20px;
+}
+#modal-astra-bb-bundle,
+#modal-astra-bb-regular,
+#modal-astra-bb-bundled
+ {
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 50px;
+    text-transform: none;
+    letter-spacing: 0.6px;
+    border-radius: 80px;
+    -moz-border-radius: 80px;
+    -webkit-border-radius: 80px;
+    width: 270px;
+    min-height: 50px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #7940de;
+    background: #7940de;
+    box-shadow: 0px 9px 20px 0px rgba(121, 64, 222, 0.4);
+    -moz-box-shadow: 0px 9px 20px 0px rgba(121, 64, 222, 0.4);
+    -webkit-box-shadow: 0px 9px 20px 0px rgba(121, 64, 222, 0.4);
+}
+#modal-astra-bb-bundle:hover,
+#modal-astra-bb-regular::hover,
+#modal-astra-bb-bundled:hover
+ {
+    background-color: #7940de;
+    color: #ffffff;
+}
+.model-popup-radio-section {
+    text-align: left;
+    margin-top: 25px;
+    display: block;
+    padding: 0px 10px;
+}
+.model-popup-radio-section label {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: 8px;
+    position: relative;
+    top: -2px;
+    font-size: 16px;
+    line-height: 1.5em;
+}
+#modal-astra-bb-bundle,
+#modal-astra-bb-regular,
+#modal-astra-bb-bundled
+ {
+    margin-top: 20px;
+}
+@keyframes zoomin {
+    0% {
+        transform: scale(3, 3);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+#modal-uabb-radio,
+#modal-uael-radio,
+#bundled-modal-uabb-radio,
+#bundled-modal-uael-radio
+ {
+    margin-bottom: 18px;
+    color: #41495b;
+    margin-right: 6px !important;
+    line-height: 1em;
+}
+.model-popup-radio-section input[type='radio']:after, 
+.model-popup-radio-section input[type='radio']:checked:after {
+    width: 16px;
+    height: 16px;
+    border-radius: 20px;
+    top: -2px;
+    left: -2px;
+    position: relative;
+    background-color: #D3D3D3;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid #D3D3D3;
+}
+.model-popup-radio-section input[type='radio']:hover:after, 
+.model-popup-radio-section input[type='radio']:checked:hover:after, 
+.model-popup-radio-section input[type='radio']:checked:after {
+    font-family: 'Ultimate-Icons' !important;
+    text-align: center;
+    position: relative;
+    line-height: 1.4em;
+    font-size: 11px;
+    color: #ffffff;
+    background: #85bf31;
+    border-color: #85bf31;
+    content: "\e955";
+    font-weight: bold;
+}
+.two-layout-pricing-section .error-message-wrap {
+    position: absolute;
+    margin-top: 0px;
+    left: 50%;
+    color: #1B1B1B;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 10px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    margin: 0 auto;
+    text-align: center;
+    -webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.1);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 25%);
+    top: calc(100% - 4%);
+}
+.modal-thumbs-icon-section i {
+    font-size: 40px !important;
+    line-height: 1.5em !important;
+    color: #8952e9;
+}
+.modal-awesome-section {
+    font-size: 30px;
+    line-height: 1.5em;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+.option-modal-popup-selection-separator {
+    width: 75px;
+    border-bottom: 2px solid #8952e9;
+    text-align: center;
+    margin: 20px auto 8px;
+}
+#modal-astra-bb-bundle .uabb-button-text.uabb-creative-button-text,
+#modal-astra-bb-regular .uabb-button-text.uabb-creative-button-text,
+#modal-astra-bb-bundled .uabb-button-text.uabb-creative-button-text {
+    position: relative;
+}
+#modal-astra-bb-bundle .uabb-button-text.uabb-creative-button-text:after,
+#modal-astra-bb-regular .uabb-button-text.uabb-creative-button-text:after,
+#modal-astra-bb-bundled .uabb-button-text.uabb-creative-button-text:after 
+ {
+    content: "\e9fd";
+    font-family: 'Ultimate-Icons' !important;
+    position: absolute;
+    left: 100%;
+    font-size: 28px;
+    margin-left: 15px;
+}
+
+
+.uabb-pricing-new-tag-col .fl-col-content.fl-node-content {
+    overflow: hidden;
+    position: relative;
+}
+.astra-bundle-new-tag {
+    background: #85bf31;
+    color: #ffffff;
+    transform: rotate(-42deg);
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    padding: 5px 38px;
+    z-index: 9;
+    top: 6px;
+    left: -25px;
+}
+.astra-bundle-new-tag-section {
+    position: absolute;
+    width: auto;
+}
+/* New Strip CSS End */
+/* New Pricing page CSS Start */
+.astra-bb-bundle-checkmark p {
+    margin-bottom: 0px;
+}
+.error-message-wrap {
+	display:none;
+ /* text-align: center;
+  color: #a94442;
+  background: #ffffff;
+  border: 1px solid #333333;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 13px;*/
+}
+.uabb-pricing-strip .uabb-infobox {
+    display: inline-flex;
+    justify-content: center;
+}
+/* Custom BTN CSS Start */
+#astra-bb-bundle,
+#astra-uabb-bundle
+{
+font-family: Poppins;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: none;
+    letter-spacing: 0.6px;
+    border-radius: 80px;
+    -moz-border-radius: 80px;
+    -webkit-border-radius: 80px;
+    width: 234px;
+    min-height: 50px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background:transparent;
+	  color:#8952e9;
+    border: 2px solid #7940de;
+}
+#astra-bb-bundle:hover, #astra-uabb-bundle:hover {
+    background-color: #8952e9;
+    color: #ffffff;
+}
+/*.uabb-pricing-disabled {
+    cursor: auto;
+}*/
+#uabb-radio, 
+#uabb-radio-bundle {
+    margin-bottom: 25px;
+}
+.deselected-color {
+    color: #a94442;
+}
+.astra-bb-bundle-checkmark input[type='radio']:after,
+.astra-bb-bundle-checkmark input[type='radio']:checked:after
+ {
+	width: 16px;
+    height: 16px;
+    border-radius: 20px;
+    top: -2px;
+    left: -2px;
+    position: relative;
+    background-color: #D3D3D3;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid #D3D3D3;
+}
+.astra-bb-bundle-checkmark input[type='radio']:hover:after, 
+.astra-bb-bundle-checkmark input[type='radio']:checked:hover:after,
+.astra-bb-bundle-checkmark input[type='radio']:checked:after 
+{
+    content: "\e955";
+    font-family: 'Ultimate-Icons' !important;
+    text-align: center;
+    position: relative;
+    line-height: 1.4em;
+    font-size: 11px;
+    color: #ffffff;
+    background: #85bf31;
+    border-color: #85bf31;
+    font-weight: bold;
+}
+.astra-bb-bundle-checkmark input[type='radio']:checked:after {
+    background-color: #85bf31;
+    border: 1px solid #85bf31;
+   /* transition: linear all 100ms;*/
+}
+.astra-bb-bundle-checkmark label {
+    position: relative;
+    top: -2px;
+    margin-left: 10px;
+}
+#uabb-radio, #uael-radio,
+#uabb-radio-bundle, #uael-radio-bundle
+{
+    margin-bottom: 25px;
+    color: #41495b;
+    margin-right: 6px !important;
+    line-height: 1em;
+}
+.astra-bb-bundle-checkmark p {
+    color: #41495b;
+    margin-top: 10px;
+}
+.custom-astra-beaver-builder {
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* Custom BTN CSS End */
+/*.uabb-best-deal-updated .most_popular {
+    background-color: #41a85f;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 13px;
+    padding-top: 22px;
+    text-align: center;
+    line-height: 16px;
+    box-shadow: #f7f7f7 0px 5px 20px;
+    height: 76px;
+    width: 76px;
+    position: absolute;
+    top: -25px;
+    right: -10px;
+    border-radius: 80px;
+}
+.uabb-most-popular {
+  position: relative;
+}*/
+.uabb-toggle-section .uabb-sec-2 {
+    position: relative;
+}
+.uabb-toggle-section .uabb-rbs-head-2:before  {
+    content: "Best Deal";
+    font-size: 9px;
+    padding:5px;
+    background: #85bf31;
+    padding: 4px 8px;
+    color: #ffffff;
+    border-radius: 4px;
+    position: absolute;
+    top: -17px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    border-bottom-left-radius: 0;
+}
+.uabb-toggle-section .uabb-rbs-head-2:after  {
+   /* content:'';
+    width: 0;
+    position:absolute;
+    left: -3px;
+    top: -7px;
+    transform:translateX(-50%);
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 5px solid #85bf31;
+    transform: rotate(-43deg);*/
+    content: '';
+    width: 0;
+    position: absolute;
+    left: 0px;
+    top: -6px;
+    border-left: 0px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 8px solid #85bf31;
+}
+/*.pricing-subheading-section .fl-rich-text {
+    text-align: center;
+    color: #41495b;
+    font-weight: 500;
+}*/
+.uabb-pricing-col-radius .fl-col-content.fl-node-content {
+    border-radius: 4px;
+}
+/*.most-popular-pricing-heading {
+    position: absolute;
+    top: -47px;
+}
+.most-popular-pricing-heading .uabb-infobox {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}*/
+/* New Pricing page CSS End */
+
+/* Error Message Design Layout Start */
+.fa-price-error {
+    background: #ffa300;
+    padding: 4px 8px;
+    margin-right: 8px;
+    color: #ffffff;
+}
+.pricing-custom-btn-text .fl-rich-text {
+    position: relative;
+}
+/*.error-message-wrap {*/
+    /*position: absolute;
+    margin-top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 242px;*/
+	  /*position: absolute;
+    margin-top: 0px;
+    left: auto;
+    margin-left: 4px;
+}*/
+.error-message-wrap {
+    position: absolute;
+    margin-top: 0px;
+    left: 50%;
+    color: #1B1B1B;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 10px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    margin: 0 auto;
+    text-align: center;
+   /* -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);*/
+	 -webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.1);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transform: translateX(-50%);
+    width: 100%;
+    top: 60px;
+}
+.error-message-wrap:after, 
+.error-message-wrap:before {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.error-message-wrap:after {
+    border-bottom-color: #ffffff;
+    border-width: 10px;
+    margin-left: -9px;
+   /* top: -24px;*/
+	  top: -20px;
+}
+.error-message-wrap:before {
+    border-bottom-color: #ccc;
+    border-width: 11px;
+    margin-left: -10px;
+    /*top: -27px;*/
+	  top: -23px;
+}
+/*.chice-icon {
+    color: #1B1B1B;
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 10px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    margin: 0 auto;
+    text-align: center;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	-webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}*/
+.chice-icon:before {
+   /* content: "\f071";
+    font-family: Fontawesome;
+	  content: "\e994"; */
+	   content: "\ea2b";
+	  font-family: 'Ultimate-Icons' !important;
+    margin-right: 5px;
+	    color: #ffffff;
+    background: #FFA300;
+    padding: 3px;
+}
+/* Error Message Design Layout CSS End */
+.astra-bundle-new-tag {
+    /*background: #7940de;
+    color: #ffffff;
+    transform: rotate(-42deg);
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    padding: 5px 42px;
+    z-index: 9;
+    top: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.7px;
+    left: -25px;
+    line-height: 15px;*/
+    background: #7940de;
+    color: #ffffff;
+    transform: rotate(-42deg);
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    padding: 7px 46px;
+    z-index: 9;
+    top: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.7px;
+    left: -25px;
+    line-height: 15px;
+}
+.uabb-pricing-new-tag-second-col .astra-bundle-new-tag {
+    padding: 7px 24px;
+    top: 14px;
+}
+.col-shadow2 .fl-col-content.fl-node-content {  
+	 	-webkit-box-shadow: 0px 2px 20px #eae7f1b8;
+    -moz-box-shadow: 0px 2px 20px #eae7f1b8;
+    box-shadow: 0px 2px 20px #eae7f1b8;
+    border-radius: 6px;
+    background: #fff;
+    /*margin-right: 30px;*/
+  	margin-left: 15px;
+	  margin-right: 15px;
+    width: 33.33%;
+}
+@media (min-width:993px) {
+.uabb-testimonial0 .pricing-testimonial-left-img-section {
+    margin-top: 9.5rem !important;
+}
+.uabb-testimonial2 .pricing-testimonial-right-img-section {
+    margin-top: 4.2rem !important;
+}
+/* Doc lightbox CSS Start */
+#slb_viewer_wrap .slb_theme_slb_default .slb_controls {
+    position:absolute !important;
+    top:0px !important;
+    right:0px !important;
+    width:auto !important;
+    text-align:center !important;
+    left:0px !important;
+    display:inline-block !important;
+}
+/* Doc lightbox CSS End */
+}
+@media (min-width:1025px) {
+    .custom-pricing-slider-section {
+        height: 380px;
+    }
+    .custom-pricing-slider-section .bx-viewport {
+        height: 290px !important;
+    }
+}
+@media(max-width: 1024px) and (min-width:993px) {
+.managed-row-width .fl-row-content.fl-row-fixed-width.fl-node-content {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+#astra-bb-regular, 
+#modal-astra-bb-regular, 
+#astra-bb-bundled {
+    width: 100%;
+}
+}
+@media (max-width:1024px) {
+    /* Pricing Testmonial Slider CSS Start */
+    .pricing-testimonial-main-left-side, .pricing-testimonial-main-right-side {
+        display: inline-block;
+        width: 100%;
+        float: left;
+        margin-right: 0px !important;
+    }
+    .pricing-testimonial-left-details-section, .pricing-testimonial-right-details-section {
+        width: calc(85% - 15px);
+        margin-left: 15px !important;
+    }
+    .pricing-testimonial-right-details-section {
+        margin-left: 0px !important;
+        margin-right: 15px !important;
+    }
+    .pricing-testimonial-left-authorinfo {
+        text-align: left;
+    }
+    .pricing-testimonial-right-authorinfo {
+        text-align: right;
+    }
+    .pricing-testimonial-img {
+        width: 100px;
+        height: 100px;
+    }
+    /* Pricing Testmonial Slider CSS End  */ 
+/* Last Main Menu CSS Start */
+.ast-transparent-header .get-pro-button-wrap .get-pro-button a {
+	margin-left: 0;
+}
+/* Last Main Menu CSS End */
+}
+@media (max-width:992px) {
+ #uabb-radio, #uael-radio, #uabb-radio-bundle, #uael-radio-bundle {
+      margin-bottom: 0;
+}
+/* Home  Page testmonial CSS */
+.astra-home-testmonial .uabb-photo-img {
+    margin-bottom:15px;
+}
+/* Blog Page CSS Start */
+.blog.ast-separate-container .ast-article-post {
+    border-bottom: none !important;
+}
+/* Blog Page CSS End  */ 
+/* Pricing Page Featured Section CSS Start */
+.uabb-pricing-strip .uabb-infobox {
+    display: block;
+    justify-content: normal;
+}
+/* Pricing Page Featured Section CSS End */
+}
+@media (max-width:768px) {
+/* Footer CSS Start */
+.astra-custom-footer-alignment .astra-advanced-hook-21480 a,
+.astra-custom-footer-alignment .uabb-heading-align-left .uabb-heading,
+.astra-custom-footer-alignment .menu {
+    text-align: left !important;
+}
+.astra-custom-footer-alignment .menu li a {
+    line-height: 1.5em !important;
+}
+.bsf-astra-footer-clear-both {
+    clear: both !important;
+}
+/* Footer CSS End */
+/* Changlog Archive Page CSS Start */
+.changelog-title {
+    font-size: 30px !important;
+}
+.bsf-changelog-cat-wrap {
+    margin: 50px 0 !important;
+}
+body.changelog-title-enabled .changelogs-archive-wraper {
+    margin-top: 165px;
+}
+/* Changlog Archive Page CSS End */
+/* Affiliate  Page CSS Start */
+.affiliate-col-convert-plus {
+    margin-top: 0px;
+}
+/* Affiliate  Page CSS End */
+/* Guideline page CSS Start */
+.guideline-section {
+    box-shadow: none;
+}
+/* Guideline page CSS End */
+/* Pricing page CSS Start */
+.astra-toggle-sections .fl-builder-content .uabb-button-left {
+    text-align: left !important;
+}
+/* Pricing page CSS End */
+/* Testmonial Slider CSS Start */
+.uabb-testimonial0 .pricing-testimonial-left-img-section {
+    margin-top: 9.5rem !important;
+}
+/* Testmonial Slider CSS End */
+.col-shadow2 .fl-col-content.fl-node-content {
+    margin-right: 0px;
+    width:100%;
+}
+.uabb-pricing-new-tag-second-col .astra-bundle-new-tag {
+    padding: 7px 38px !important;
+    /*top: 30px;*/
+    top: 14px;
+    left: -50px;
+}
+.astra-bundle-new-tag {
+    padding: 7px 28px !important;
+    top: 15px;
+    left: -50px;
+}
+.uabb-toggle-section .uabb-sec-1 {
+    margin-right: 0px !important;
+    margin-bottom  : 12px !important;
+}
+.uabb-toggle-section .uabb-sec-2 {
+    margin-left: 0px !important;
+    margin-top: 12px !important;
+}
+.uabb-toggle-section .uabb-rbs-head-2:before {
+    top: 30px;
+    left: 0;
+    transform: none;
+    width: 100%;
+    border-bottom-left-radius: 4px;
+}
+.uabb-toggle-section .uabb-rbs-head-2:before {
+    content: "Best Deal";
+    font-size: 9px;
+    text-align: center;
+    background: #85bf31;
+    padding: 4px 8px;
+    color: #ffffff;
+    border-radius: 4px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    transform: none;
+    width: 100%;
+    border-bottom-left-radius: 4px;
+}
+  .uabb-toggle-section .uabb-rbs-head-2:after {
+    content: '';
+    width: auto;
+    position: absolute;
+    left: 50%;
+	  top: 100%;
+    border-top:none;
+    height: 0;
+    bottom: -6px;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #85bf31;
+    transform: translateX(-50%);
+}
+.col-shadow2 .fl-col-content.fl-node-content {
+    margin-left: 0;
+    margin-right: 0;
+}
+.uabb-toggle-section .uabb-button-left {
+        text-align: left !important;
+}
+  #uabb-radio, #uael-radio, #uabb-radio-bundle, #uael-radio-bundle {
+    margin-bottom: 20px; 
+}
+.error-message-wrap {
+    padding: 10px 8px;
+    width: auto;
+}
+.tooltipster-sidetip.tooltipster-right .tooltipster-arrow-border {
+    border-right-color: #20292f;
+}
+.tooltip.tooltipstered {
+    display: inline-block;
+}
+.tooltipster-sidetip.tooltipster-top .tooltipster-arrow-border {
+    border-top-color: #20292f;
+}
+.tooltipster-sidetip .tooltipster-content {
+    text-align: left;
+}
+.tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow-border {
+    border-bottom-color: #20292f;
+}
+}
+@media (max-width: 767px) {
+  .error-message-wrap {
+    padding: 10px 12px;
+    width: 100%;
+} 
+/* Testmonial Slider CSS Start */
+.pricing-testimonial-left-img-section, .pricing-testimonial-right-img-section {
+    display: inline-block;
+    width: 100%;
+    float: none;
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+}
+.pricing-testimonial-left-details:after, 
+.pricing-testimonial-right-details:after {
+    border: none;
+}
+.pricing-testimonial-main-right-side {
+    position: relative;
+}
+.pricing-testimonial-right-img-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.pricing-testimonial-right-details-section {
+    padding-top: 120px;
+}
+.pricing-testimonial-left-details-section, 
+.pricing-testimonial-right-details-section {
+    width: 100%;
+    margin-left: 0px !important;
+}
+.pricing-testimonial-right-details-section {
+    margin-right: 0px !important;
+}
+.pricing-testimonial-left-authorinfo,
+.pricing-testimonial-right-authorinfo {
+    text-align: center;
+}
+.pricing-testimonial-left-details, 
+.pricing-testimonial-right-details {
+    background-color: transparent;
+    color: #444444!important;
+    text-align: center;
+    padding: 10px 0px;
+}
+.pricing-testimonial-main-left-side, 
+.pricing-testimonial-main-right-side {
+    border: 1px solid #6c65c2;
+    padding: 30px 15px;
+    text-align: center !important;
+}
+.pricing-testimonial-right-img-section {
+    top: 30px;
+}
+/*.pricing-testimonial-img {
+    width: 100px;
+    height: 100px;
+}*/
+.uabb-testimonial0 .pricing-testimonial-left-img-section {
+    margin-top: 0rem !important;
+}
+/* Testmonial Slider CSS End */
+}
+@media (max-width: 480px) {
+.real-user-review {
+    font-size: 18px;
+    line-height: 1.4em;
+    margin-bottom: 10px !important;
+}
+/* Footer CSS Start */
+.astra-custom-footer-alignment .fl-col-small.bsf-astra-footer {
+    width: 50% !important;
+}
+.bsf-footer-top-feature-clear-both,
+.bsf-astra-footer-5 {
+    clear: both !important;
+}
+.bsf-astra-footer-clear-both {
+    clear: none !important;
+}
+/* Footer CSS End */
+/* Pricing Page CSS Start */
+.common-pricing-row .uabb-list-icon-text-heading {
+    line-height: 1.5em !important;
+	  margin-bottom: 12px;
+}
+.common-pricing-row .uabb-module-content.uabb-imgicon-wrap {
+    position: relative;
+    top: -6px;
+}
+/* Pricing Page CSS End */
+/* Changelog CSS Start  */
+.changelog-title:after {
+    font-size: 55px !important;
+    line-height: 55px !important;
+    height: 55px !important;
+    width: 55px !important;
+}
+/* Changelog CSS End */ 
+/* Affiliate  Page CSS Start */
+.affiliate-col-wrap {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+/* Affiliate  Page CSS End */
+.tooltip.tooltipstered {
+    display:block;
+}
+.tooltipster-sidetip .tooltipster-content {
+    text-align: center;
+}  
+.astra-bundle-new-tag {
+    padding: 5px 45px;
+    top: 15px;
+    left: -48px;
+}
+.uabb-pricing-new-tag-second-col .astra-bundle-new-tag {
+    padding: 5px 30px;
+    top: 20px;
+    left: -50px;
+}
+  #uabb-radio, #uael-radio, #uabb-radio-bundle, #uael-radio-bundle {
+    margin-bottom: 0px; 
+}
+/* Both Pricing Template CSS Start */
+.error-message-popup {
+    padding: 20px !important;
+    width: auto !important;
+}
+.option-modal-popup-selection {
+    padding: 0;
+}
+.model-popup-radio-section label {
+    font-size: 14px;
+    line-height: 1.5em;
+}
+.model-popup-radio-section {
+    padding: 0px;
+}
+.tooltipster-sidetip.tooltipster-top .tooltipster-arrow-background {
+    border-top-color: #20292f;
+}
+.tooltipster-fade.tooltipster-show {
+    margin-left: 0px !important;
+    margin-top: 10px !important;
+}
+.tooltipster-base.tooltipster-fade.tooltipster-show.tooltipster-left {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+.tooltipster-base.tooltipster-fade.tooltipster-show {
+    margin-left: 0px !important;
+}
+.tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow-background {
+    border-bottom-color: #20292f;
+}
+.two-layout-pricing-section .error-message-wrap {
+        top: 100%;
+        margin-top: 10px;
+}
+.tooltipster-base {
+    display:none !important;
+}
+.tooltip, .tooltip-left{
+    cursor:default !important;
+}
+.tooltip.tooltipstered, .tooltip-left.tooltipstered {
+    display: contents !important;
+}
+.addon-selection-outer-section .fl-module-content.fl-node-content {
+    margin: 0;
+}
+.addon-selection-outer-section #uabb-radio {
+    margin-bottom: 20px;
+}
+#bundle-outer-uabb-radio {
+    margin-bottom:0 !important;
+}
+#bundle-outer-uael-radio {
+    margin-top: 20px !important;
+}
+/* Both Pricing Template CSS End */
+}
+@media(max-width:320px) {
+    #astra-bb-bundle, #astra-uabb-bundle,
+    #astra-bb-regular, #modal-astra-bb-regular,
+    #astra-bb-bundled {
+        width: 100%;
+    }
+  .error-message-popup {
+    width: 98% !important;
+}
+}
+/* Pricing CSS End */
+@media(max-width:768px) {
+/* Resource Page CSS Start */
+.list_align .uabb-heading-wrapper .uabb-text-editor {
+    padding: 70px 20px 40px 20px;
+}
+/* Resource Page CSS End */
+.docs-single-templates-enabled #primary.bsf-options-form-wrap {
+    padding: 0;
+}
+.youtube-subscribe-bar-container .youtube-subscribe-bar div:nth-child(1) {
+    display: block;
+    margin-right: 10px;
+}
+/* Footer CSS Start */
+.site-footer .ast-small-footer-wrap .ast-small-footer-section-equally {
+	width: 100%;
+}
+/* Footer CSS End  */ 
+}
+.youtube-subscribe-bar {
+    text-align: center;
+    line-height:2;
+}
+
+/* Post box design  */ 
+.bsf-astra {
+    background-color: rgba(247, 247, 247, 0.44);
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.18);
+}

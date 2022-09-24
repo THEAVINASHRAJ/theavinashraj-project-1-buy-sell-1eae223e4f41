@@ -1,0 +1,876 @@
+
+(function($){
+	AstraSitesShowcase = {
+
+		_ref			: null,
+
+		/**
+		 * _api_params = {
+		 * 		'search'                  : '',
+		 * 		'per_page'                : '',
+		 * 		'astra-site-category'     : '',
+		 * 		'astra-site-page-builder' : '',
+		 * 		'page'                    : '',
+		 *   };
+		 *
+		 * E.g. per_page=<page-id>&astra-site-category=<category-ids>&astra-site-page-builder=<page-builder-ids>&page=<page>
+		 */
+		_api_params		: {},
+		_breakpoint		: 768,
+		_iconUploader	: null,
+	
+		init: function()
+		{
+			this._showSiteOnLoad();
+			this._masonry();
+			this._resetPagedCount();
+			this._bind();
+			this._showFilters();
+			this._showSiteSearch();
+			this._showSiteCount();
+		},
+
+		/**
+		 * Show Site On Load.
+		 *
+		 * @since 1.0.2
+		 */
+		_showSiteOnLoad: function()
+		{
+			if( AstraSitesShowcase._getParamFromURL('website') )
+			{
+				var slug      = AstraSitesShowcase._getParamFromURL('website');
+				var clean_url = astraSitesShowcase.apiDomain;
+
+				// Clean the URL.
+				clean_url = clean_url.replace('http:','');
+				clean_url = clean_url.replace('https:','');
+
+				var api_params = {
+					meta_key   : 'astra-site-url',
+					meta_value : clean_url + slug,
+				};
+
+				// API Request.
+				var api_url = astraSitesShowcase.apiEndpoint + 'astra-sites?' + decodeURIComponent( $.param( api_params ) );
+				$.ajax({
+					url   : api_url,
+					cache : false
+				})
+				.done(function( items, status, XHR ) {
+
+					if( 'success' === status && items.length && items[0] ) {
+						var site_url = ( 'astra-site-url' in items[0] ) ? items[0]['astra-site-url'] + 'TB_iframe=true&width=600&height=550' : '';
+						var title    = ( 'title' in items[0] ) ? items[0]['title']['rendered'] : '';
+						var rel      = false;
+
+						if( title && site_url ) {
+							AstraSitesShowcase._showSingleSite( title, site_url, rel );
+						}
+					}
+				});
+			}
+		},
+
+		/**
+		 * Get URL param.
+		 */
+		_getParamFromURL: function(name, url)
+		{
+		    if (!url) url = window.location.href;
+		    name = name.replace(/[\[\]]/g, "\\$&");
+		    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+		        results = regex.exec(url);
+		    if (!results) return null;
+		    if (!results[2]) return '';
+		    return decodeURIComponent(results[2].replace(/\+/g, " "));
+		},
+
+		/**
+		 * Show Site Search Box.
+		 *
+		 * @since 1.0.0
+		 */
+		_showSiteSearch: function() {
+
+			// Show search.
+			if( astraSitesShowcase.settings['show-search'] ) {
+				var template = wp.template('astra-showcase-search');
+				jQuery('#astra-sites-filters').append(template);
+			}
+		},
+
+		/**
+		 * Show Site Count.
+		 *
+		 * @since 1.0.0
+		 */
+		_showSiteCount: function() {
+
+			// Show count.
+			if( astraSitesShowcase.settings['show-count'] ) {
+				var template = wp.template('astra-showcase-count');
+				jQuery('#astra-sites-filters').prepend(template);
+			}
+
+		},
+		
+		/**
+		 * Binds events for the Astra Sites.
+		 *
+		 * @since 1.0.0
+		 * @access private
+		 * @method _bind
+		 */
+		_bind: function()
+		{
+			$( window ).on('resize', 									AstraSitesShowcase._resize );
+
+			$( document ).on('astra-sites-api-request-fail',			AstraSitesShowcase._apiFailed );
+			$( document ).on('astra-api-post-loaded-on-scroll',			AstraSitesShowcase._reinitGridScrolled );
+			$( document ).on('astra-api-post-loaded', 					AstraSitesShowcase._reinitGrid );
+			$( document ).on('astra-api-category-loaded', 				AstraSitesShowcase._addFilters );
+			$( document ).on('astra-api-all-category-loaded', 			AstraSitesShowcase._loadFirstGrid );
+
+			$( document ).on('click', '.site-preview', 					AstraSitesShowcase._previewOpen );
+			$( document ).on('click', '.actions a', 					AstraSitesShowcase._previewResponsive );
+			$( 'body' ).on('thickbox:removed', 							AstraSitesShowcase._previewClose );
+
+			// Event's for API request.
+			$( document ).on('keyup input', '#wp-filter-search-input', 	AstraSitesShowcase._search );
+			$( document ).on('click', '.filter-links a', 				AstraSitesShowcase._filterClick );
+
+			if( 'click' === astraSitesShowcase.showSitesOn ) {
+				$( document ).on('click', '.astra-showcase-load-more-sites', AstraSitesShowcase._next_page );
+			} else {
+				$( document ).on('scroll', 									AstraSitesShowcase._scroll );
+			}
+		},
+
+		/**
+		 * Responsive On Click.
+		 */
+		_previewResponsive: function( event ) {
+
+			event.preventDefault();
+
+			var icon = jQuery(this).find('.dashicons');
+
+			var viewClass = icon.attr('data-view') || '';
+
+			jQuery('#TB_window').removeClass( 'desktop' );
+			jQuery('#TB_window').removeClass( 'tablet' );
+			jQuery('#TB_window').removeClass( 'mobile' );
+			jQuery('#TB_window').addClass( viewClass );
+
+			jQuery('.actions .dashicons').removeClass('active');
+			icon.addClass('active');
+
+			jQuery('#TB_iframeContent').removeClass();
+			jQuery('#TB_iframeContent').addClass( viewClass );
+
+		},
+
+		/**
+		 * On Filter Clicked
+		 */
+		_filterClick: function( event )
+		{
+			event.preventDefault();
+
+			$(this).parents('.filter-links').find('a').removeClass('active');
+			$(this).addClass('active');
+
+			// Clean data before process request.
+			$('#astra-sites').css('height', '');
+			$('.no-more-demos').addClass('hide-me');
+
+			$('body').addClass( 'astra-showcase-loading' );
+
+			if( $('.astra-showcase-not-found').length ) {
+				$('.spinner').removeClass('hide-me').addClass('is-active');
+				$('.astra-showcase-not-found').remove();	
+			} else {
+				$('.spinner').removeClass('hide-me'); // addClass('is-active');
+			}
+			$('#wp-filter-search-input').val('');
+
+	        // Show sites.
+			AstraSitesShowcase._showSites();
+
+			if( $('.filters-wrap').length ) {
+				
+				$('html, body').animate({
+					scrollTop: $('.filters-wrap').offset().top - 100
+				});
+
+				// Change Category URLs.
+				AstraSitesShowcase._change_category_urls();
+			}
+		},
+
+		/**
+		 * Change category URLs.
+		 */
+		_change_category_urls: function() {
+			var url_params = AstraSitesShowcase._getQueryStrings();
+			delete url_params['page-builder'];	
+			delete url_params['category'];	
+
+			var current_url = window.location.href;
+			var root_url = current_url.substr(0, current_url.indexOf('?')); 
+			if( '' === root_url ) {
+				root_url = current_url;
+			}
+
+			var current_category     = $('.filter-links.astra-site-category').find('.active').data('slug') || '';
+			var current_page_builder = $('.filter-links.astra-site-page-builder').find('.active').data('slug') || '';
+
+			url_params['page-builder'] = current_page_builder;
+			url_params['category']     = current_category;
+			delete url_params[''];		// Removed extra empty object.
+
+			var current_url_separator = ( root_url.indexOf( "?" ) === -1 ) ? "?" : "&";
+			var new_url = root_url + current_url_separator + decodeURIComponent( $.param( url_params ) );
+
+			// Change URL.
+			AstraSitesShowcase._changeURL( new_url );
+		},
+
+		/**
+		 * On Resize
+		 */
+		_resize: function() {
+
+			if( AstraSitesShowcase._windowWidth() ) {
+
+				jQuery('#astra-sites').masonry().masonry( 'destroy' );
+
+				// Init masonry.
+				AstraSitesShowcase._masonry();
+			}
+		},
+
+		/**
+		 * Preview Close
+		 * 
+		 * @param  {object} event Object.
+		 */
+		_previewClose: function( event ) {
+
+			event.preventDefault();
+			$('html').removeClass('processing');
+
+			var url_params = AstraSitesShowcase._getQueryStrings();
+			delete url_params['website'];
+
+			var current_url = window.location.href;
+			var root_url = current_url.substr(0, current_url.indexOf('?')); 
+			if( jQuery.isEmptyObject( url_params ) ) {
+				var new_url = root_url + decodeURIComponent( $.param( url_params ) );
+			} else {
+				var current_url_separator = ( root_url.indexOf( "?" ) === -1 ) ? "?" : "&";
+				var new_url = root_url + current_url_separator + decodeURIComponent( $.param( url_params ) );
+			}
+
+			// Change URL.
+			AstraSitesShowcase._changeURL( new_url );
+		},
+
+		/**
+		 * Get query strings.
+		 */
+		_getQueryStrings: function( str )
+		{
+			return (str || document.location.search).replace(/(^\?)/,'').split("&").map(function(n){return n = n.split("="),this[n[0]] = n[1],this}.bind({}))[0];
+		},
+
+		/**
+		 * Preview Open
+		 * 
+		 * @param  {object} event Object.
+		 */
+		_previewOpen: function( event ) {
+			event.preventDefault();
+
+			// Site Preview.
+			var title = jQuery(this).data('title') || jQuery(this).data('name') || null,
+				href  = jQuery(this).data('href') || jQuery(this).data('alt'),
+				rel   = jQuery(this).data('rel') || false;
+
+			var clean_url = href.substr(0, href.indexOf('TB_iframe')) || ''; 
+			var slug      = /[^/]*$/.exec( clean_url )[0] || '';
+	
+			if( slug ) {
+
+				$('html').addClass('processing');
+				AstraSitesShowcase._showSingleSite( title, href, rel );
+
+				var url_params = {
+									'website' : slug
+								};
+
+				// Change URL.
+				if( ! AstraSitesShowcase._getParamFromURL('website') ) {
+					var current_url = window.location.href;
+					var current_url_separator = ( window.location.href.indexOf( "?" ) === -1 ) ? "?" : "&";
+
+					var new_url = current_url + current_url_separator + decodeURIComponent( $.param( url_params ) );
+					
+					AstraSitesShowcase._changeURL( new_url );
+				}
+			}
+
+		},
+
+		/**
+		 * Clean the URL.
+		 * 
+		 * @param  string url URL string.
+		 * @return string     Change the current URL.
+		 */
+		_changeURL: function( url )
+		{
+			var title = $(document).find("title").text();
+			History.pushState(null, title, url);
+		},
+
+		/**
+		 * Preview Open
+		 * 
+		 * @param  {object} event Object.
+		 */
+		_showSingleSite: function( title, href, rel )
+		{
+			if( href )
+			{
+				$('html').addClass('processing');
+
+				tb_show( title, href, rel );
+
+				var currentSiteTitle = $("#TB_ajaxWindowTitle").text();
+
+				var template = wp.template('astra-showcase-responsive-view');
+				$('#TB_closeAjaxWindow').prepend( template );
+				$('#TB_iframeContent').wrap('<div id="TB_iframeContent-wrapper"></div>');
+		
+				$('#TB_window').addClass('desktop').append('<div class="site-loading"><h3>'+astraSitesShowcase.strings.siteLoadingTitle+'</h3><p>'+astraSitesShowcase.strings.siteLoadingMessage+'</p></div>');
+			}
+		},
+
+		/**
+		 * Lazy Load Images
+		 *
+		 * @see  http://jquery.eisbehr.de/lazy/#features
+		 */
+		_lazyLoad: function() {
+
+			$('#astra-sites img').Lazy({
+		        effect: 'fadeIn',
+		        onFinishedAll: function() {
+		            if( jQuery( window ).outerWidth() > AstraSitesShowcase._breakpoint ) {
+						$('#astra-sites').masonry('reload');
+					}
+		        }
+		    });
+		},
+
+		/**
+		 * Init Masonry.
+		 * 
+		 * @see  /wp-includes/js/jquery/jquery.masonry.min.js (Source http://masonry.desandro.com).
+		 */
+		_masonry: function() {
+
+			if( AstraSitesShowcase._windowWidth() ) {
+				jQuery('#astra-sites').masonry({
+					horizontalOrder : false,
+					percentPosition : false
+				});
+			}
+		},
+
+		/**
+		 * Show Sites
+		 * 
+		 * @param  {Boolean}
+		 */
+		_windowWidth: function() {
+
+			if( jQuery( window ).outerWidth() > AstraSitesShowcase._breakpoint ) {
+				return true;
+			}
+			
+			return false;
+		},
+
+		// Add 'search'
+		_apiAddParam_search: function() {
+			var search_val = jQuery('#wp-filter-search-input').val() || '';
+			if( '' !== search_val ) {
+				AstraSitesShowcase._api_params['search'] = search_val;
+			}
+		},
+
+		_apiAddParam_per_page: function() {
+			// Add 'per_page'
+			var per_page_val = 3;
+			if( astraSitesShowcase.settings && astraSitesShowcase.settings["par-page"] ) {
+				per_page_val = parseInt( astraSitesShowcase.settings["par-page"] );
+			}
+			AstraSitesShowcase._api_params['per_page'] = per_page_val;
+		},
+
+		// Add 'astra-site-category'
+		_apiAddParam_astra_site_category: function() {
+
+			var selected_category_id = jQuery('.filter-links.astra-site-category').find('.active').data('group') || '';
+			if( '' === selected_category_id && 'all' !== selected_category_id ) {
+				
+				// Has `category` slug in URL param?
+				var category_slug  = AstraSitesShowcase._getParamFromURL('category') || '';
+				if( category_slug ) {
+					var selected_category_id = jQuery('.filter-links.astra-site-category').find('a[data-slug="'+category_slug+'"]').data('group') || '';
+					AstraSitesShowcase._api_params['astra-site-category'] =  selected_category_id;
+				}
+
+			} else if( '' !== selected_category_id && 'all' !== selected_category_id ) {
+				AstraSitesShowcase._api_params['astra-site-category'] =  selected_category_id;
+			} else if( 'astra-site-category' in astraSitesShowcase.settings ) {
+
+				if( $.inArray('all', astraSitesShowcase.settings['astra-site-category']) !== -1 ) {
+					var storedCategories = astraSitesShowcase.settings['astra-site-category'];
+					storedCategories = jQuery.grep(storedCategories, function(value) {
+						return value != 'all';
+					});
+					AstraSitesShowcase._api_params['astra-site-category'] =  storedCategories.join(',');
+				}
+			}
+		},
+
+		// Add 'astra-site-page-builder'
+		_apiAddParam_astra_site_page_builder: function() {
+
+			var selected_page_builder_id = jQuery('.filter-links.astra-site-page-builder').find('.active').data('group') || '';
+			if( '' === selected_page_builder_id && 'all' !== selected_page_builder_id ) {
+
+				// Has `page-builder` slug in URL param?
+				var category_slug  = AstraSitesShowcase._getParamFromURL('page-builder') || '';
+				if( category_slug ) {
+					var selected_page_builder_id = jQuery('.filter-links.astra-site-page-builder').find('a[data-slug="'+category_slug+'"]').data('group') || '';
+					AstraSitesShowcase._api_params['astra-site-page-builder'] =  selected_page_builder_id;
+				}
+
+			} else if( '' !== selected_page_builder_id && 'all' !== selected_page_builder_id ) {
+				AstraSitesShowcase._api_params['astra-site-page-builder'] =  selected_page_builder_id;
+			} else if( 'astra-site-page-builder' in astraSitesShowcase.settings ) {
+				if( $.inArray('all', astraSitesShowcase.settings['astra-site-page-builder']) !== -1 ) {
+					var storedBuilders = astraSitesShowcase.settings['astra-site-page-builder'];
+					storedBuilders = jQuery.grep(storedBuilders, function(value) {
+						return value != 'all';
+					});
+					AstraSitesShowcase._api_params['astra-site-page-builder'] = storedBuilders.join(',');
+				}
+			}
+		},
+
+		_apiAddParam_page: function() {
+			// Add 'page'
+			var page_val = parseInt(jQuery('body').attr('data-astra-demo-paged')) || 1;
+			AstraSitesShowcase._api_params['page'] = page_val;
+		},
+
+		/**
+		 * Show Sites
+		 * 
+		 * 	Params E.g. per_page=<page-id>&astra-site-category=<category-ids>&astra-site-page-builder=<page-builder-ids>&page=<page>
+		 *
+		 * @param  {Boolean} resetPagedCount Reset Paged Count.
+		 * @param  {String}  trigger         Filtered Trigger.
+		 */
+		_showSites: function( resetPagedCount, trigger ) {
+
+			if( undefined === resetPagedCount ) {
+				resetPagedCount = true
+			}
+
+			if( undefined === trigger ) {
+				trigger = 'astra-api-post-loaded';
+			}
+
+			if( resetPagedCount ) {
+				AstraSitesShowcase._resetPagedCount();
+			}
+
+			// Add Params for API request.
+			AstraSitesShowcase._api_params = {};
+
+			AstraSitesShowcase._apiAddParam_search();
+			AstraSitesShowcase._apiAddParam_per_page();
+			AstraSitesShowcase._apiAddParam_astra_site_category();
+			AstraSitesShowcase._apiAddParam_astra_site_page_builder();
+			AstraSitesShowcase._apiAddParam_page();
+
+			// API Request.
+			var api_post = {
+				slug: 'astra-sites?' + decodeURIComponent( $.param( AstraSitesShowcase._api_params ) ),
+				trigger: trigger,
+			};
+
+			AstraSitesAPI._api_request( api_post );
+
+		},
+
+		/**
+		 * Get Category Params
+		 * 
+		 * @param  {string} category_slug Category Slug.
+		 * @return {mixed}               Add `include=<category-ids>` in API request.
+		 */
+		_getCategoryParams: function( category_slug ) {
+
+			// Has category?
+			if( category_slug in astraSitesShowcase.settings ) {
+
+				var storedBuilders = astraSitesShowcase.settings[ category_slug ];
+
+				// Remove `all` from stored list?
+				storedBuilders = jQuery.grep(storedBuilders, function(value) {
+					return value != 'all';
+				});
+
+				return '?include='+storedBuilders.join(',');
+			}
+
+			return '';
+		},
+
+		/**
+		 * Get All Select Status
+		 * 
+		 * @param  {string} category_slug Category Slug.
+		 * @return {boolean}              Return true/false.
+		 */
+		_getCategoryAllSelectStatus: function( category_slug ) {	
+
+			// Has category?
+			if( category_slug in astraSitesShowcase.settings ) {
+
+				// Has `all` in stored list?
+				if( $.inArray('all', astraSitesShowcase.settings[ category_slug ]) === -1 ) {
+					return false;
+				}
+			}
+
+			return true;
+		},
+
+		/**
+		 * Show Filters
+		 */
+		_showFilters: function() {
+
+			/**
+			 * Categories
+			 */
+			var category_slug = 'astra-site-page-builder';
+			var category = {
+				slug          : category_slug + AstraSitesShowcase._getCategoryParams( category_slug ),
+				id            : category_slug,
+				class         : category_slug,
+				trigger       : 'astra-api-category-loaded',
+				wrapper_class : 'filter-links',
+				show_all      : AstraSitesShowcase._getCategoryAllSelectStatus( category_slug ),
+			};
+
+			AstraSitesAPI._api_request( category );
+
+			/**
+			 * Page Builder
+			 */
+			var category_slug = 'astra-site-category';
+			var category = {
+				slug          : category_slug + AstraSitesShowcase._getCategoryParams( category_slug ),
+				id            : category_slug,
+				class         : category_slug,
+				trigger       : 'astra-api-all-category-loaded',
+				wrapper_class : 'filter-links',
+				show_all      : AstraSitesShowcase._getCategoryAllSelectStatus( category_slug ),
+			};
+
+			AstraSitesAPI._api_request( category );
+		},
+
+		/**
+		 * Load First Grid.
+		 *
+		 * This is triggered after all category loaded.
+		 * 
+		 * @param  {object} event Event Object.
+		 */
+		_loadFirstGrid: function( event, data ) {
+			AstraSitesShowcase._addFilters( event, data );
+
+			setTimeout(function() {
+
+				// Add active class for `Category`.
+				var category_slug  = AstraSitesShowcase._getParamFromURL('category') || '';
+				if( category_slug ) {
+					$('.filter-links.astra-site-category').find('a').removeClass('active');
+					$('.filter-links.astra-site-category').find('a[data-slug="'+category_slug+'"]').addClass('active');
+				}
+
+				// Add active class for `Page Builder`.
+				var page_builder_slug  = AstraSitesShowcase._getParamFromURL('page-builder') || '';
+				if( page_builder_slug ) {
+					$('.filter-links.astra-site-page-builder').find('a').removeClass('active');
+					$('.filter-links.astra-site-page-builder').find('a[data-slug="'+page_builder_slug+'"]').addClass('active');
+				}
+
+				AstraSitesShowcase._showSites();
+
+			}, 100);
+		},
+
+		/**
+		 * Append filters.
+		 * 
+		 * @param  {object} event Object.
+		 * @param  {object} data  API response data.
+		 */
+		_addFilters: function( event, data ) {
+			event.preventDefault();
+
+			if( jQuery('#' + data.args.id).length ) {
+				var template = wp.template('astra-showcase-filters');
+				jQuery('#' + data.args.id).html(template( data )).find('li:first a').addClass('active');
+			}
+
+		},
+
+		/**
+		 * Append sites on scroll.
+		 * 
+		 * @param  {object} event Object.
+		 * @param  {object} data  API response data.
+		 */
+		_reinitGridScrolled: function( event, data ) {
+
+			var template = wp.template('astra-showcase-list');
+
+			if( data.items_count > 0 ) {
+				$('body').addClass('astra-showcase-has-items').removeClass('astra-showcase-not-has-items');
+			} else {
+				$('body').removeClass('astra-showcase-has-items').addClass('astra-showcase-not-has-items');
+			}
+
+			if( data.items.length > 0 ) {
+
+				$('.filter-count .count').text( data.items_count );
+
+				setTimeout(function() {
+					$('#astra-sites').append(template( data ));
+
+					AstraSitesShowcase._lazyLoad();
+
+					AstraSitesShowcase._imagesLoaded();
+				}, 800);
+			} else {
+				$('#astra-sites-showcase').find('.spinner').removeClass('is-active');
+			}
+
+
+		},
+
+		/**
+		 * Update Astra sites list.
+		 * 
+		 * @param  {object} event Object.
+		 * @param  {object} data  API response data.
+		 */
+		_reinitGrid: function( event, data ) {
+
+			var template = wp.template('astra-showcase-list');
+
+			jQuery('.filter-count .count').text( data.items_count );
+
+			if( data.items_count > 0 ) {
+				$('body').addClass('astra-showcase-has-items').removeClass('astra-showcase-not-has-items');
+			} else {
+				$('body').removeClass('astra-showcase-has-items').addClass('astra-showcase-not-has-items');
+			}
+
+			jQuery('body').attr('data-astra-demo-last-request', data.items_count);
+
+			jQuery('#astra-sites').html(template( data ));
+
+			AstraSitesShowcase._lazyLoad();
+
+			AstraSitesShowcase._imagesLoaded();
+
+			$('#astra-sites-showcase').find('.spinner').removeClass('is-active');
+			
+			// $('#astra-sites-showcase').append( wp.template('astra-showcase-load-more-button') );
+
+		},
+
+		/**
+		 * Check image loaded with function `imagesLoaded()`
+		 */
+		_imagesLoaded: function() {
+
+			var self = jQuery('#sites-filter.execute-only-one-time a');
+			
+			$('.astra-sites-grid').imagesLoaded()
+			.always( function( instance ) {
+				if( jQuery( window ).outerWidth() > AstraSitesShowcase._breakpoint ) {
+					$('#astra-sites').masonry('reload');
+				}
+
+				$('#astra-sites-showcase').find('.spinner').removeClass('is-active');
+
+				$('body').removeClass( 'astra-showcase-loading' );
+				$('.astra-showcase-load-more-sites').removeClass( 'hide-me' );
+			})
+			.progress( function( instance, image ) {
+				var result = image.isLoaded ? 'loaded' : 'broken';
+			});
+
+		},
+
+		/**
+		 * API Request Failed/Not found any demos.
+		 */
+		_apiFailed: function() {
+			$('#astra-sites-showcase').find('.spinner').removeClass('is-active').addClass('hide-me');
+			$('#astra-sites-showcase').find('.no-more-demos').removeClass('hide-me');
+
+			var template = wp.template('astra-sites-suggestions');
+			if( ! $( '.astra-sites-suggestions').length ) {
+				$('#astra-sites').append( template );
+
+				if( jQuery( window ).outerWidth() > AstraSitesShowcase._breakpoint ) {
+					$('#astra-sites').masonry('reload');
+				}
+			}
+		},
+
+		/**
+		 * Search Site.
+		 */
+		_search: function() {
+
+			$this = jQuery('#wp-filter-search-input').val();
+
+			var astra_page_builder = jQuery('.filter-links.astra-site-page-builder'),
+				astra_category 	   = jQuery('.filter-links.astra-site-category'),
+				page_builder_id   	= astra_page_builder.find('.active').data('group') || '',
+				category_id   		= astra_category.find('.active').data('group') || '';
+
+			// Clean data before process request.
+			$('#astra-sites').css('height', '');
+			$('.no-more-demos').addClass('hide-me');
+
+			$('body').addClass( 'astra-showcase-loading' );
+
+			if( $('.astra-showcase-not-found').length ) {
+				$('.spinner').removeClass('hide-me').addClass('is-active');
+				$('.astra-showcase-not-found').remove();
+
+			} else {
+				$('.spinner').removeClass('hide-me'); // addClass('is-active');
+			}
+			
+			window.clearTimeout(AstraSitesShowcase._ref);
+			AstraSitesShowcase._ref = window.setTimeout(function () {
+				AstraSitesShowcase._ref = null;
+
+				AstraSitesShowcase._resetPagedCount();
+				jQuery('body').addClass('loading-content');
+				jQuery('body').attr('data-astra-demo-search', $this);
+
+				AstraSitesShowcase._showSites();
+
+			}, 500);
+
+		},
+
+		/**
+		 * On Scroll
+		 */
+		_next_page: function(event) {
+
+			AstraSitesShowcase._updatedPagedCount();
+
+			$('body').addClass( 'astra-showcase-loading' );
+
+			$('#astra-sites-showcase').find('.spinner').addClass('is-active');
+			
+			/**
+			 * @see _reinitGridScrolled() which called in trigger 'astra-api-post-loaded-on-scroll'
+			 */
+			AstraSitesShowcase._showSites( false, 'astra-api-post-loaded-on-scroll' );
+		
+		},
+
+		/**
+		 * On Scroll
+		 */
+		_scroll: function(event) {
+
+			var scrollDistance = jQuery(window).scrollTop();
+
+			var themesBottom = Math.abs(jQuery(window).height() - jQuery('#astra-sites-showcase').offset().top - jQuery('#astra-sites-showcase').height());
+			themesBottom = themesBottom + 100 ;
+
+			ajaxLoading = jQuery('body').data('scrolling');
+
+			if (scrollDistance > themesBottom && ajaxLoading == false) {
+				AstraSitesShowcase._updatedPagedCount();
+
+				$('#astra-sites-showcase').find('.spinner').addClass('is-active');
+
+				jQuery('body').data('scrolling', true);
+				
+				/**
+				 * @see _reinitGridScrolled() which called in trigger 'astra-api-post-loaded-on-scroll'
+				 */
+				AstraSitesShowcase._showSites( false, 'astra-api-post-loaded-on-scroll' );
+
+			}
+		
+		},
+		
+		/**
+		 * Update Page Count.
+		 */
+		_updatedPagedCount: function() {
+			paged = parseInt(jQuery('body').attr('data-astra-demo-paged'));
+			jQuery('body').attr('data-astra-demo-paged', paged + 1);
+			window.setTimeout(function () {
+				jQuery('body').data('scrolling', false);
+			}, 800);
+		},
+
+		/**
+		 * Reset Page Count.
+		 */
+		_resetPagedCount: function() {
+
+			$('body').attr('data-astra-demo-last-request', '1');
+			$('body').attr('data-astra-demo-paged', '1');
+			$('body').attr('data-astra-demo-search', '');
+			$('body').attr('data-scrolling', false);
+			$('body').removeClass( 'astra-showcase-loading' );
+		}
+
+	};
+
+	/**
+	 * Initialize AstraSitesShowcase
+	 */
+	$(function(){
+		AstraSitesShowcase.init();
+	});
+
+})(jQuery);

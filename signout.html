@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Happy Diwali</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=Spicy+Rice"
+            rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap.css"/>
+        <script src="jquery.js"></script>
+        <style>
+            body {
+                font-family: 'Spicy Rice', cursive;
+            }
+            #l1,
+            #l2,
+            #l3,
+            #l4,
+            #l5,
+            #l6 {
+                display: none;
+            }
+        </style>
+    </head>
+    <body
+        class=""
+        style="background: linear-gradient(to bottom ,white,red,green,pink,blue,yellow)">
+        <div class="container">
+            <div class="row">
+                <div
+                    class="col-md-12 p-5 mt-5 text-light"
+                    style="background: linear-gradient(to bottom ,rgb(173, 85, 85),rgb(121, 223, 121),rgb(230, 90, 199),rgb(130, 38, 236),rgb(35, 219, 243));">
+                    <div class="div1">
+                        <h1 class="text-center">Enter Your Name</h1>
+                        <label for="">Enter Your Name</label>
+                        <input type="text" class="form-control getname"/>
+                        <input type="button" class="btn clickme btn-success mt-3" value="Click Me"/>
+
+                    </div>
+                    <div
+                        class="col-md-12 mt-3"
+                        style="width:10%; height:35px; float:right; background: linear-gradient(to bottom ,rgb(209, 147, 147),rgb(153, 207, 153),rgb(228, 125, 205),rgb(204, 181, 231),rgb(151, 216, 224));">
+                        <div class="text-light text-center">
+                            <a href="login.html">
+                                <strong>Login</strong>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="div2 text-center">
+                        <div id="l1" class="display-4">Thanks</div>
+                        <div id="l2" class="display-4"></div>
+
+                        <div id="l3" class="display-4">for Ur Visit</div>
+                        <div id="l4" class="display-4">Have a</div>
+                        <div id="l5" class="display-4">Nice Day</div>
+                        <div id="l6" class="display-4">
+                            <i class="fas fa-smile"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(function () {
+                $('.clickme').click(function () {
+                    $('.div1').hide();
+                    var myname = $('.getname').val();
+                    $('#l2').html(myname);
+                    $('#l1').show(2000, function () {
+                        $('#l2').show(2000, function () {
+                            $('#l3').show(2000, function () {
+                                $('#l4').show(2000, function () {
+                                    $('#l5').show(2000, function () {
+                                        $('#l6').show(2000);
+                                    });
+                                });
+                            });
+                        });
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

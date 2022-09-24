@@ -1,0 +1,67 @@
+/* Sale pricing Page css start */
+.halloween-sale-heading .uabb-infobox-title {
+    text-shadow: 2px 2px 2px #361664;
+}
+.sale-pricing-toggle .selling-price {
+    color: #8e8e8e;
+    font-size: 26px;
+    text-decoration: line-through;
+    position: relative;
+    bottom: 5px;
+  /*position: absolute;
+    left: calc(50% - 90px);
+    transform: translateX(-50%);*/
+}
+.sale-pricing-toggle .col-shadow2 {
+    position: relative;
+}
+/*
+.sale-pricing-toggle .selling-price.selling-price-bcol1,
+.sale-pricing-toggle .selling-price.selling-price-rcol3 {
+    left: calc(50% - 85px);
+}
+.sale-pricing-toggle .selling-price.selling-price-rcol2 {
+    left: calc(50% - 80px);
+}
+.sale-pricing-toggle .selling-price.selling-price-rcol1 {
+    left: calc(50% - 70px);
+}*/
+/* Sale pricing Page css End */
+@media (max-width: 1024px) and (min-width: 993px) {
+    .managed-row-width.responsive-toggle-setting .fl-row-content.fl-row-fixed-width.fl-node-content {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .responsive-toggle-setting .common-pricing-row .fl-row-content-wrap {
+        padding-left: 0px;
+        padding-right: 0;
+    }
+    .responsive-toggle-setting > .fl-row-content-wrap {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .responsive-toggle-setting #bundle-outer-uabb-radio, 
+    .responsive-toggle-setting #bundle-outer-uael-radio {
+        margin-bottom: 0;
+    }
+    .responsive-toggle-setting #bundle-outer-uael-radio {
+        margin-top: 20px;
+    }
+    .responsive-toggle-setting  .mini-agency-btn .fl-node-content {
+        margin-top: 15px;
+    }
+}
+@media (max-width: 768px) {
+    .sale-pricing-toggle .selling-price {
+        bottom: 2px;
+        font-size: 22px;
+    }
+}
+@media (max-width:480px) {
+    .responsive-toggle-setting .addon-selection-outer-section #uabb-radio {
+        margin-bottom: 0px;
+    }
+    .responsive-toggle-setting .addon-selection-outer-section #uael-radio {
+        margin-top: 20px;
+}
+}

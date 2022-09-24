@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Country Info</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 countrylist">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-dark table-striped table-hover">
+                    <tbody>
+                        <tr>
+                            <th>Name</th>
+                            <td id="cname"></td>
+                        </tr>
+                        <tr>
+                            <th>Flag</th>
+                            <td id="cflag"></td>
+                        </tr>
+                        <tr>
+                            <th>Capital</th>
+                            <td id="ccapital"></td>
+                        </tr>
+                        <tr>
+                            <th>Population</th>
+                            <td id="cpopulation"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+    $(function(){
+        $.ajax({
+            url: 'https://restcountries.eu/rest/v2/all',
+            success: function(data){
+                var listcountry = "<select class='form-control' onchange='getCountryInfo()' id='coname'>";
+                for(i in data){
+                    listcountry += "<option>"+data[i].name+"</option>";
+                }
+                listcountry += "</select>";
+                $('.countrylist').html(listcountry);
+            }
+        });
+    });
+    function getCountryInfo(){
+        var countryname = $('#coname').val();
+        if(countryname=='Pakistan'){
+            alert('Sorry Information not available');
+        }else{
+            var url = "https://restcountries.eu/rest/v2/name/"+countryname+"?fullText=true";
+            $.ajax({
+            url : url,
+            success: function(data){
+                $('#cname').html(data[0].name);
+                $('#cflag').html("<img src='"+data[0].flag+"' style='width:40%;' />");
+                $('#ccapital').html(data[0].capital);
+                $('#cpopulation').html(data[0].population);
+            }
+
+            });
+        }
+    }
+    </script>
+</body>
+</html>

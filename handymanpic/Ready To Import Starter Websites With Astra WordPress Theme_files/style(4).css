@@ -1,0 +1,2052 @@
+/**
+Theme Name: Astra Child
+Author: Brainstorm Force
+Author URI: http://wpastra.com/about/
+Description: Astra is the fastest, fully customizable & beautiful theme suitable for blogs, personal portfolios and business websites. It is very lightweight (less than 50KB on frontend) and offers unparalleled speed. Built with SEO in mind, Astra comes with schema.org code integrated so search engines will love your site. Astra offers plenty of sidebar options and widget areas giving you a full control for customizations. Furthermore, we have included special features and templates so feel free to choose any of your favorite page builder plugin to create pages flexibly. Some of the other features: # WooCommerce Ready # Responsive # Compatible with major plugins # Translation Ready # Extendible with premium addons # Regularly updated # Designed, Developed, Maintained & Supported by Brainstorm Force. Looking for a perfect base theme? Look no further. Astra is fast, fully customizable and beautiful theme!
+Version: 1.0.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: astra-child
+Template: astra
+*/
+
+/*
+You can add your own CSS here.*/
+.get-pro-button-wrap .get-pro-button a {
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 6px 22px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: all .3s linear;
+    margin-left: 18px;
+}
+/*Above Header Menu*/
+.ast-above-header ul.sub-menu {
+    border-radius: 4px;
+    box-shadow: 0 16px 35px 0 rgba(49, 53, 68, 0.3);
+    margin-left: 14px;
+}
+.ast-above-header .submenu-with-border ul a {
+    border:0;
+}
+.ast-above-header .sub-menu li:first-child {
+    padding-top: 10px;
+}
+.ast-above-header .sub-menu li:last-child {
+    padding-bottom: 10px;
+}
+.price_page .uabb-pricing-element-box
+{
+	padding: 0px !important;
+
+}
+.price_page .uabb-pricing-table-column-1
+{
+    box-shadow: 0 20px 52px rgba(0,0,0,0.15);
+    border-radius: 10px !important;
+    background-color: #fff;
+}
+
+.price_page .uabb-pricing-table .uabb-pricing-table-outter-1 .uabb-pricing-table-price
+{
+    padding: 10px 0px;
+}
+.price_page .uabb-pricing-table ul
+{
+    margin: 12px 30px 30px 30px;
+}
+
+.price_page .uabb-pricing-table .uabb-pricing-table-features li
+{
+	padding: 13px 0px;
+	border-bottom: 1px solid #e9e7ec;
+	-webkit-transition: all .4s linear;
+    transition: all .4s linear;
+    margin: 0px 20px;
+}
+
+.price_page  .uabb-pricing-table-title
+{
+    padding-top: 34px;
+}
+.price_page .uabb-infobox p
+{
+	margin-bottom: 0px;
+	padding-bottom: 6px;
+}
+.price_page .uabb-pricing-table-outter-1 .uabb-pricing-table-price
+{
+    background-color: transparent !important;
+}
+.price_page .uabb-pricing-table .uabb-pricing-table-duration {
+    font-size: 18px !important;
+}
+
+.price_page .uabb-pricing-table .uabb-pricing-table-features li:before
+{
+        content: '\f058';
+    font-family: fontawesome;
+    color: #41a85f;
+    margin-right: 10px;
+}
+.price_page .price_discount
+{
+	text-decoration: line-through;
+    font-size: 32px;
+    color: #afafaf;
+    font-weight: 500;
+    padding-right: 8px;
+}
+.testimonial_pro .uabb-testimonial-photo.uabb-testimonial-left .uabb-imgicon-wrap
+{
+	margin-right: 50px !important;
+}
+
+.uabb-tabs-nav a.uabb-tab-link:before {
+    content: "";
+    height: 7px;
+    width: 7px;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px #b6b3bb;
+    -webkit-transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
+    border-radius: 50%;
+    padding: 7px;
+    line-height: 8px;
+    display: inline-block;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+.uabb-tabs-nav .uabb-tab-current a.uabb-tab-link:before{
+	box-shadow: inset 0 0 0 8px #6dc624;
+}
+/* IE Browser CSS */
+.internet-explorer .popup-opened .uabb-pricing-new-tag-col > .fl-col-content.fl-node-content {
+    overflow: inherit;
+}
+.internet-explorer .popup-opened .custom-pricing-uabb-overlay {
+     background: rgba(0, 0, 0, 0.81);
+}
+.addon_infobox .uabb-infobox
+{
+    padding: 0px 12px 0px 12px;
+}
+
+.tab_btt .price_page .fl-row-content-wrap
+{
+	background-color: #734de1;
+}
+.tab_btt .price_page .uabb-heading 
+{
+	color: #fff;
+}
+.tab_btt .price_page .uabb-infobox-text
+{
+	color: rgba(255, 255, 255, 0.95);
+}
+.tab_btt .price_page .fl-module-pricing-box
+{
+box-shadow: 0 20px 60px rgba(49, 32, 97, 0.32);
+}
+
+
+@media screen and (min-width:769px) {
+    .main-header-bar-navigation .sub-menu
+{
+	box-shadow: 0 16px 35px 0 rgba(49, 53, 68, 0.3);
+	margin-left: 14px;
+}
+.main-navigation .sub-menu li:first-child
+{
+	padding-top: 16px;
+}
+.main-navigation .sub-menu li:last-child
+{
+	padding-bottom: 16px;
+}
+.main-header-bar{
+    padding:0.9em !important
+}
+.ast-masthead-custom-menu-items{
+    line-height:20px
+}
+.main-header-menu a {
+    letter-spacing: 0.25px;
+}
+.ast-above-header .menu-item-has-children>a:after {
+    margin-left: 5px;
+}
+}
+
+.main-header-menu  ul a
+{
+	padding: .54em 2em;
+}
+
+
+.main-navigation ul ul, .ast-header-break-point .main-header-menu ul
+{
+	border-radius: .375rem;
+}
+.main-header-menu ul 
+{
+    width: 220px;
+}
+
+
+/* Pricing Page CSS */
+
+.price_main .price_discount1
+{
+    text-decoration: line-through;
+    font-size: 32px;
+    color: rgba(0, 0, 0, 0.30);
+    font-weight: 500;
+    padding-right: 8px;
+}
+.price_main .uabb-pricing-table-title
+{
+    display: none;
+}
+.price_main .uabb-pricing-table .uabb-pricing-table-features li:before
+{
+        content: '\f058';
+    font-family: fontawesome;
+    color: #41a85f;
+    margin-right: 10px;
+}
+.price_main .uabb-pricing-table .uabb-pricing-table-features li {
+    padding: 13px 0px;
+    border-bottom: 1px solid #e9e7ec;
+    -webkit-transition: all .4s linear;
+    transition: all .4s linear;
+    margin: 0px 50px;
+}
+
+.price_main .uabb-pricing-table-column .uabb-pricing-table-price
+{
+    padding: 26px 0px;
+}
+
+.price_column .fl-col-content
+{
+    background-color: #f7f7f9;
+    border-radius: 10px 0px 0px 10px;
+}
+.price_column .uabb-pricing-table-column .uabb-pricing-table-column-1
+{
+    border-radius: 10px;
+}
+.price_column1 .uabb-pricing-table-column-1
+{
+    background-color: #fff;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.13);
+}
+.price_column1 .uabb-pricing-table-column-2
+{
+    background-color: #fff;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.13);
+}
+.price_main .uabb-pricing-table .uabb-pricing-table-outter-1 .uabb-pricing-table-column-1
+{
+    border-radius: 10px;
+}
+.price_main .uabb-pricing-table-outter-2 .uabb-pricing-table-column-2
+{
+    border-bottom-right-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+}
+.price_main .uabb-pricing-table-outter-1 .uabb-featured-pricing-box
+{
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+}
+.price_main .uabb-pricing-table-outter-2 .uabb-featured-pricing-box
+{
+    border-top-right-radius: 10px !important;
+     border-top-left-radius: 10px !important;
+}
+.price_main .uabb-list-icon-text-heading:before
+{
+    content: '\f058';
+    font-family: fontawesome;
+    color: #41a85f;
+    margin-right: 10px;
+}
+
+.price_main .uabb-pricing-table-outter-2 .uabb-pricing-table-column-2
+{
+    border-left: 1px solid #e9e7ec;
+}
+.money_back
+{
+        border: 1px solid #edebf1;
+    border-radius: 10px;
+    padding: 10px 60px;
+}
+.price_main .uabb-pricing-table .uabb-pricing-table-features li:first-child
+{
+    border-top: 1px solid #e9e7ec;
+    padding-top: 42px;
+}
+
+.price_page .uabb-heading {
+	font-weight: bold;
+}
+
+.price_main .ribbon-pricing {
+    display: block;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0px;
+}
+.price_main .ribbon-pricing .ribbon-inner {
+    font-family: arial,sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 20px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(36deg);
+    position: relative;
+    padding: 5px 0;
+    left: -9px;
+    top: 10px;
+    width: 140px;
+    background-color: #f02e49;
+    color: #FFF;
+    padding-left: 13px;
+}
+
+/* Doc Style */
+h2.bsf-entry-title {
+    font-family: Poppins;
+    text-transform: inherit;
+}
+
+.docs-single-templates-enabled #content .ast-container,
+.docs-tax-templates-enabled #content .ast-container {
+    border-bottom: 1px solid #eeeeee;
+}
+
+.bsf-categories-wrap {
+    margin: 50px 0 !important;
+}
+/* Change log */
+
+.type-chnangelogs .entry-title {
+    font-family: Poppins;
+    font-weight: normal;
+    text-transform: inherit;
+}
+
+.single-changelog div#comments {
+    display: none;
+}
+
+.bsf-change-log-wrap {
+    max-width: 1024px;
+    margin: auto;
+}
+
+.post-type-archive-changelog .site-content > .ast-container {
+    max-width: 100%;
+    padding: 0;
+}
+
+.post-type-archive-changelog .get-pro-button-wrap .get-pro-button a,
+.tax-product .get-pro-button-wrap .get-pro-button a,
+.single-changelog .get-pro-button-wrap .get-pro-button a {
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 6px 22px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: all .3s linear;
+    margin-left: 18px;
+}
+
+.tax-product h2.entry-title a {
+    pointer-events: none;
+}
+/*Change log Responsive*/
+
+@media(max-width:768px) {
+.bsf-cat-col {
+    width: 100%;
+    float: none;
+}
+.bsf-cat-col:after {
+    top: 0;
+}
+}
+
+/* Changelog */
+
+h2.changelog-title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 42px;
+    line-height: 48px;
+    padding-top: 10px;
+}
+
+h2.changelog-title:after {
+    color: #8952e9;
+    font-size: 70px;
+    height: auto;
+    width: auto;
+    line-height: 70px;
+    height: 70px;
+    width: 70px;
+}
+p.changelog-sub-title {
+    font-size: 22px;
+    line-height: 24px;
+    line-height: 33px;
+}
+body.changelog-title-enabled .changelogs-archive-wraper {
+    margin-top: 200px;
+}
+.bsf-changelog-col:after {
+    color: #8952e9;
+}
+
+body.product-tax-enabled .page-numbers {
+    padding: 6px 15px;
+}
+
+.bsf-changelog-cat-wrap h4:first-child {
+    font-size: 18px;
+}
+.bsf-changelog-cat-wrap .bsf-cat-count {
+    font-size: 14px;
+}
+.bsf-changelog-cat-wrap {
+    margin: 110px 0 !important;
+}
+.product-tax-enabled .astra-advanced-hook-21480 {
+    background: #fff;
+}
+@media (min-width: 769px) {
+    .post-type-archive-changelog .site-content > .ast-container, 
+    .post-type-archive-changelog .site-content > .ast-container {
+        max-width: 1020px;
+    }
+}
+@media(max-width:768px) {
+.docs-single-templates-enabled .site-header .ast-container, 
+.docs-tax-templates-enabled .site-header .ast-container {
+max-width:100%;
+}
+span.uabb-creative-menu-mobile-toggle-label {
+    color: #333;
+}
+.get-pro-button-wrap .get-pro-button a {
+    margin-left: 0px !important;
+}
+}
+.docs-tax-templates-enabled .navigation.pagination {
+    padding-top: 15px;
+}
+
+.docs-tax-templates-enabled .page-numbers {
+    border: 1px solid #d6d6d6;
+    padding: 3px 8px;
+    text-align: center;
+    width: 30px;
+    margin: 1px;
+    display: inline-block;
+}
+
+/* Atrs GiveAway*/
+
+.list-astra-item-row .uabb-infobox-text.uabb-text-editor {
+    position: relative;
+}
+
+.list-astra-item .fl-col-content {
+    border: 1px solid #f9f8fe;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 51px 0px rgba(0, 0, 0, 0.11);
+    transition: all 200ms ease-in-out;
+}
+.list-astra-item {
+    padding: 20px;
+}
+.astra-price-box {
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    transform: translate(-50%, -50%);
+    color: #fff !important;
+    background: -webkit-linear-gradient(0deg, #5835dc, #7d23a3);
+    padding: 4px;
+    width: 132px;
+    text-align: center;
+    border: 1px solid #d6d4da;
+    border-radius: 41px;
+}
+
+.astra-agency .uabb-image-content:after {
+    content: "Agency";
+    text-transform: uppercase;
+    vertical-align: middle;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.astra-pro .uabb-image-content:after {
+    content: "Pro";
+    text-transform: uppercase;
+    vertical-align: middle;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.list-astra-item-row .uabb-infobox-title-wrap {
+    position: relative;
+}
+
+.list-astra-item-row .uabb-infobox-title-wrap:after {
+    content: "";
+    position: absolute;
+    left: 134px;
+    top: -15px;
+    width: 55px;
+    height: 1px;
+    background: #e3e3e3;
+}
+
+/* Coupon code */
+
+span.coupn-code {
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.05);
+    border: 1px dashed #979797;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+span.launch-date {
+    display: block;
+    letter-spacing: 0.9px;
+    background: -webkit-linear-gradient(0deg, #3600e0, #7900bf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #5b34d5;
+    font-size: 16px !important;
+    line-height: 26px !important;
+    font-weight: 500 !important;
+}
+.company-tag h3.uabb-infobox-title {
+    background: -webkit-linear-gradient(right, #e9494a, #734ee1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #e9494a;
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 37px;
+    font-weight: 500;
+}
+.page-id-22309 a.uabb-tab-link:before {
+    margin-right: 7px;
+}
+.none-col {
+    box-shadow: none !important;
+    border: 0 !important;
+    background: transparent;
+}
+
+/* Add Space after videos for changelogs */
+.term-astra-pro-addon video,
+.term-astra-theme video,
+.term-astra-sites-plugin video,
+.term-astra-pro-addon li img, 
+.term-astra-pro-addon p img,
+.term-astra-theme li img, 
+.term-astra-theme p img,
+.term-astra-sites-plugin li img, 
+.term-astra-sites-plugin p img {
+    margin-top: 15px;
+    margin-bottom: 25px;
+	border: 1px solid #eaeaea;
+}
+
+/* CSS by Satish */
+
+.testimonial_section .fl-col-has-cols
+{
+    background: #fff;
+    border-radius: 10px;
+    margin-top: -130px;
+}
+
+.button-icon-removed i {
+    display: none;
+}
+
+.cta-woo .fl-row-content-wrap {
+    background-size: inherit !important;
+    background-repeat: repeat-x !important;
+}
+
+@media screen and (min-width: 768px) {
+   .testimonial_section .uabb-photo-content {
+    position: absolute;
+    bottom: -20px;
+    right: -11%;
+        transform: translate(3%,3%);
+}
+.testimonial_section .fl-col-has-cols{
+    position:relative;
+}
+}
+
+.list_style .fl-row-content
+{
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px -10px rgba(22, 35, 49, 0.15);
+    margin-top: -120px;
+    box-shadow: 0 40px 82px -35px #d7d2f2cf;
+    margin-bottom: 40px;
+}
+/* Astra Sites Showcase CSS */
+
+.site-type.premium {
+    background: #f06262 !important;
+    padding: 2px 8px !important;
+    color: #fff;
+    border-radius: 2px;
+}
+#astra-sites-filters {
+    margin: 0 auto 5em auto !important;
+    box-shadow: 0 4px 12px 0px rgba(0, 0, 0, 0.05) !important;
+}
+.astra-site-category li a {
+    margin: 0 10px !important;
+    padding: 0px !important;
+    -webkit-transition: color .3s ease-in-out !important;
+    transition: color .3s ease-in-out !important;
+    color: #9998a0;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+.astra-site-category li a:hover {
+    color: #444;
+}
+.astra-site-category li a.active {
+    border-bottom: 1px solid #222 !important;
+    color: #333 !important;
+}
+.astra-site-page-builder li a {
+    margin: 0 10px !important;
+    padding: 0px !important;
+    -webkit-transition: color .3s ease-in-out !important;
+    transition: color .3s ease-in-out !important;
+    color: #9998a0;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+.astra-site-page-builder li a:hover {
+    color: #8952E9;
+}
+.astra-site-page-builder li a.active {
+    border-bottom: 1px solid #8952e9 !important;
+    color: #8952E9 !important;
+}
+#astra-sites-filters .search-form input {
+    outline: none;
+}
+input[type=search] {
+    color: #999;
+    border-color: #e7e6ea;
+    border-radius: 2px;
+    background: #fcfbfd;
+}
+input[type="search"]:focus {
+    border-color: #c0bfc5;
+}
+.filter-links a,
+.filter-links a:active,
+.filter-links a:focus {
+    outline: none;
+}
+#astra-sites .site-single .inner {
+    -webkit-transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+#astra-sites .site-single .inner:hover {
+    box-shadow: 0px 22px 30px -5px rgba(0, 0, 0, 0.3);
+}
+#astra-sites-showcase .site-single:hover .view-demo-wrap {
+    background: rgba(24, 10, 47, 0.35)!important;
+}
+.view-demo {
+    background: #f7f6fb !important;
+    text-shadow: none !important;
+    font-weight: 400 !important;
+    color: #3a3840 !important;
+    padding: 0.5em 1em !important;
+}
+/* Responsive Menu CSS */
+
+@media(max-width:768px) {
+    .main-navigation ul ul, .ast-header-break-point .main-header-menu ul {
+        border-radius: 0em;
+    }
+}
+
+/* Video Fullwidth */
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    
+    padding-top: 25px;
+    height: 0;
+    margin-bottom: 2em;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.ast-transparent-header .main-header-menu li.focus > a,
+.main-header-menu li.focus {
+    color: #fff;
+}
+.ast-transparent-header .main-header-menu .sub-menu li.focus > a,
+.main-header-menu .sub-menu li.focus {
+    color: #333;
+}
+/* Coming Soon Addon CSS */
+
+.coming_soon {
+    background: #fbfafd;
+    width: 107px;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 22px !important;
+    border: 1px solid #a7a4ae;
+    font-size: 11px !important;
+    color: #333 !important;
+}
+@media (max-width: 768px) {
+    .coming_soon {
+       margin: 0px auto;
+    }
+}
+/* Guarantee Infobox CSS */
+
+.guarantee .uabb-infobox {
+    box-shadow: 0px 13px 37px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 28px 38px;
+}
+/* CP Popup CSS */
+
+.cp-target a {
+    color: #444;
+}
+/* Footer Alignment CSS */
+
+.textwidget .adv-icon-center a:first-child {
+    margin-left: 0px;
+}
+@media screen and (max-width: 768px) {
+    .textwidget .adv-icon-center {
+        text-align: center !important;
+    }
+    .footer-adv .ast-row,
+    .fl-builder-content .uabb-button-left {
+        text-align: center !important;
+    }
+}
+.widget-title {
+    margin-bottom: 1.1em;
+}
+/* Hero Section CSS*/
+
+.hero_header .uabb-infobox-title-prefix {
+    letter-spacing: 3px;
+}
+/* Affiliate page  CSS*/
+
+.earn-price .uabb-infobox {
+    border-radius: 8px;
+    -webkit-transition-duration: 600ms;
+    transition-duration: 600ms;
+}
+.earn-price .uabb-infobox:hover {
+    box-shadow: 0px 16px 26px 0px rgba(0, 0, 0, 0.2);
+}
+/* Affiliate counter CSS */
+
+.mailer-wrap {
+    display: flex;
+}
+.mailer-wrap-col {
+    width: 33.33%;
+}
+.affiliate-col {
+    position: relative;
+    border: 1px solid #eaeaea;
+    margin: 25px auto;
+    padding: 15px 0 45px 0;
+    box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.08);
+    z-index: 0 !important;
+}
+/* Blog Post formating classes*/
+.astra-note {
+    background: #d7edff;
+    border: 1px solid #acdaff;
+    padding: 15px 20px;
+    margin: 0 0 20px 0;
+}
+.astra-devider {
+    margin: 40px 0;
+    border-width: 15px;
+    border-color: #0CAFFA;
+    border-bottom-style: solid;
+}
+.astra-sub-devider {
+    margin: 40px 0;
+    border-width: 1px;
+    border-color: #999999;
+    border-bottom-style: dotted;
+}
+.astra-sub-devider > a {
+    display: inline-block;
+    font-size: .9em;
+    text-decoration: none;
+    outline: none;
+    padding-bottom: 5px;
+    color: #999999;
+}
+
+.astra-sub-devider.go-to-top {
+    text-align: right;
+    line-height: 1;
+}
+/*end*/
+.our_plans {
+    position: absolute;
+    top: 8px;
+    right: -9px;
+    padding: 2px 13px 2px 10px;
+    min-width: 93px;
+    background-color: #7252df;
+    font-size: 12px !important;
+    color: #fff !important;
+    line-height: 22px;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 1px 3px 10px 1px #e5e5e5;
+}
+.desc_color .uabb-text-editor {
+    color: rgba(255, 255, 255, 0.94);
+}
+.our_plans:before {
+    content: "";
+    position: absolute;
+    bottom: 18px;
+    right: -6px;
+    border: 7px solid transparent;
+    border-left: 7px solid #5b39d2;
+    z-index: -1;
+}
+.cta_bt .uabb-creative-button-wrap a:hover {
+    box-shadow: 0 10px 36px -6px rgba(22, 35, 49, 0.25);
+}
+.row-shadow {
+    -webkit-box-shadow: 0px 15px 80px -5px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 15px 80px -5px rgba(0, 0, 0, 0.25);
+    -o-box-shadow: 0px 15px 80px -5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 8px 44px -5px rgba(0, 0, 0, 0.22);
+    background-color: #fff;
+    position: relative;
+    margin-top: -50px;
+    border-radius: 6px;
+}
+.column-photo {
+    background-size: contain !important;
+    width: 900px;
+    position: absolute;
+    top: -43px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25)
+}
+.demo-count {
+    -webkit-box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 9px 26px 0 rgba(0, 0, 0, 0.08);
+    border: 1px solid #f4f4f4;
+}
+.circle_design .uabb-number .svg-container {
+    background: #fff;
+    border-radius: 100%;
+    box-shadow: 0px 5px 38px 0px rgba(41, 44, 58, 0.07);
+}
+.icon-infobox .uabb-icon-wrap .uabb-icon i,
+.fl-node-58f4876438fb5 .uabb-icon-wrap .uabb-icon i {
+    box-shadow: rgba(124, 124, 124, 0.258824) 2px 2px 15px;
+}
+.testimonial_design .uabb-testimonial {
+    box-shadow: 0 12px 30px -10px rgba(22, 35, 49, 0.10);
+}
+.testimonial_align .uabb-testimonial-author-description {
+    font-style: italic;
+}
+.infobox_elements .uabb-infobox {
+    padding: 22px 16px;
+    background: rgba(255, 255, 255, 0.5);
+    ;
+}
+.infobox_elements .uabb-infobox:hover {
+    transition: .2s all linear;
+    background-color: #fff;
+    box-shadow: 0 8px 15px 0 rgba(0, 0, 0, .2);
+    border-radius: 5px;
+}
+.infobox_elements .uabb-image-content img {
+    opacity: .55;
+    transition: all .2s linear;
+    -webkit-filter: brightness(90%);
+    -moz-filter: brightness(90%);
+    filter: brightness(90%);
+}
+.infobox_elements .uabb-infobox:hover img {
+    -webkit-filter: brightness(75%);
+    -moz-filter: brightness(75%);
+    filter: brightness(75%);
+}
+.infobox_elements .uabb-infobox:hover h3.uabb-infobox-title {
+    color: #373535;
+}
+.infobox_speed .uabb-infobox {
+    box-shadow: 0 15px 40px -10px rgba(22, 35, 49, 0.15);
+    background: #fff;
+    padding: 12px 0px;
+    border-radius: 10px;
+    transition: all .2s linear;
+}
+.infobox_speed .uabb-imgicon-wrap {
+    border-bottom: 1px solid #e3eaed;
+    padding-bottom: 18px;
+}
+.infobox_speed .uabb-infobox:hover {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+    -webkit-box-shadow: 0 20px 40px -10px rgba(22, 35, 49, 0.2);
+    -moz-box-shadow: 0 20px 40px -10px rgba(22, 35, 49, 0.2);
+    box-shadow: 0 20px 40px -10px rgba(22, 35, 49, 0.2);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.photo_shadow {
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
+}
+.photo_shadows {
+    -webkit-box-shadow: 0px 20px 150px #d6dee4;
+    -moz-box-shadow: 0px 20px 150px #d6dee4;
+    box-shadow: 0px 20px 150px #d6dee4;
+}
+.infobox_test .uabb-infobox {
+    background: #fff;
+    padding: 31px 16px;
+    border-radius: 8px;
+}
+.box_shadow .uabb-photo-content {
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.16);
+}
+.cta_button .uabb-creative-button-wrap a {
+    transition: all 0.3s ease-in-out;
+}
+.cta_button .uabb-creative-button-wrap a:hover {
+    box-shadow: 0 5px 24px 0 rgba(51, 51, 51, 0.40);
+}
+.layout_over .uabb-image-content img {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.7;
+    top: 0px;
+    position: relative;
+}
+.layout_over .uabb-image-content img:hover {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+    top: -5px;
+}
+.layout_over .uabb-infobox p.uabb-infobox-title {
+    color: #fff;
+    opacity: 0.4;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.layout_over .uabb-infobox:hover p.uabb-infobox-title {
+    color: #fff;
+    opacity: 1;
+}
+.row_gradient .fl-row-content-wrap {
+    background: rgba(0, 0, 0, 0) -webkit-linear-gradient(left, #00c9fd 0%, #81ee8e 100%) repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) linear-gradient(to right, #00c9fd 0%, #81ee8e 100%) repeat scroll 0 0;
+}
+.row-gradient .fl-row-content-wrap {
+    background: linear-gradient(-30deg, #EF7EFF, #5A47DF);
+}
+.fb_button .uabb-creative-button-wrap a {
+    border: 1px solid #e6e3ec !important;
+}
+.perchase_key .uabb-infobox {
+    box-shadow: 0px 13px 37px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 0.380em;
+    padding: 44px 70px;
+    background: #fff;
+}
+.perchase_key .uabb-text-editor .perchase-key {
+    background: #f2fdf4;
+    border-radius: 4px;
+    color: #2e4632;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 16px 10px 15px 5px;
+    border: 1px solid #d3e6d6;
+    margin-bottom: 24px;
+}
+/*
+Resources List Align
+*/
+
+.list_align .uabb-text-editor ul li {
+    list-style-type: none;
+    background-image: url(/wp-content/uploads/2017/06/list-arrow.png);
+    text-align: left;
+    padding: 7px 32px;
+    background-position: 0px 11px;
+    background-repeat: no-repeat;
+}
+.list_align .uabb-heading-wrapper .uabb-text-editor {
+    background: #f9f8fc;
+    border-radius: 6px;
+    padding: 70px 44px 40px 44px;
+    border: 1px solid #d6d4da;
+}
+.list_align .uabb-heading-wrapper h3 span {
+    background: #ffffff;
+    padding: 9px 47px;
+    position: relative;
+    border-radius: 40px;
+    top: 31px;
+    color: #4a4a4a;
+    border: 1px solid #d6d4da;
+}
+.list_align .uabb-text-editor ul li a {
+    color: #3a3a3a;
+}
+.list_align .uabb-text-editor ul li a:hover {
+    color: #0085ba;
+}
+.textwidget .adv-icon-center {
+    text-align: left;
+}
+.textwidget .adv-icon-link {
+    margin-bottom: 0px !important;
+}
+/*.ast-footer-overlay {
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+}*/
+.testimonial-section p {
+    margin-bottom: 10px;
+    padding-bottom: 0px !important;
+}
+.testimonial-section .uabb-infobox {
+    padding: 38px 30px;
+}
+/*Support form*/
+
+.ast-support-parent form.wpcf7-form {
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.05);
+    padding: 3rem;
+    background: #fff;
+    border: none;
+}
+.ast-support-parent form.wpcf7-form input.wpcf7-form-control,
+.ast-support-parent form.wpcf7-form .wpcf7 textarea,
+.ast-support-parent form.wpcf7-form div.wpcf7 textarea,
+.ast-support-parent select.wpcf7-form-control.wpcf7-select {
+    background: #fff;
+    border: 2px solid #e8e8e8;
+    font-size: 13px;
+}
+.ast-support-parent .ast-support-child .cp-support-btn .wpcf7-form-control.wpcf7-submit {
+    width: auto;
+    padding: 16px 30px;
+    margin-top: 20px;
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0);
+    border-style: solid;
+    border-color: #57565c;
+    border-width: 2px;
+    color: #57565c;
+    font-size: 15px;
+    font-weight: 400;
+}
+.ast-support-parent .cp-support-btn {
+    text-align: center;
+}
+.ast-support-parent .ast-support-child .cp-support-btn .wpcf7-form-control.wpcf7-submit:hover {
+    background: #ffd71c;
+    border: 2px solid #ffd71c;
+}
+.ast-support-parent .wpcf7 input[type="text"]:focus,
+.ast-support-parent .wpcf7 input[type="email"]:focus,
+.ast-support-parent .wpcf7 textarea:focus,
+.ast-support-parent .wpcf7 input[type="password"]:focus,
+.ast-support-parent .wpcf7 select:focus {
+    color: #4a545a;
+    border-top-color: #E0E0E0;
+    border-left-color: #E0E0E0;
+    background: #f6f7fb;
+}
+.ast-support-parent .ast-support-child .ast-support-btn .wpcf7-form-control.wpcf7-submit:hover {
+    background-color: #57565c;
+    color: #fff;
+}
+@media only screen and (max-width: 600px) {
+    .wpcf7 input[type="submit"],
+    .wpcf7 .button,
+    .wpcf7 .wpcf7-submit {
+        font-size: 14px;
+    }
+}
+.wpcf7 input[type="submit"]:hover,
+.wpcf7 .button:hover,
+.wpcf7 .wpcf7-submit:hover {
+    cursor: pointer;
+    color: #fff;
+    background: #37BF91;
+    box-shadow: inset 0 0 80px rgba(255, 255, 255, .15);
+    border: none;
+}
+.wpcf7 input[type="submit"]:active,
+.wpcf7 .button:active,
+.wpcf7 .wpcf7-submit:active {
+    outline: none;
+}
+/* Required field */
+
+.wpcf7 .cf-field-required {
+    color: #f00;
+    position: relative;
+    font-weight: 600;
+}
+/* Input Fields */
+
+.wpcf7 input {
+    width: 100%;
+    max-width: 100%;
+}
+.wpcf7 textarea {
+    width: 100%;
+    height: 10em !important;
+}
+.wpcf7 input[type="submit"] {
+    width: auto;
+}
+.wpcf7 input[type=number] {
+    -moz-appearance: textfield;
+}
+.wpcf7 input:not([type="submit"]),
+.wpcf7 textarea,
+.wpcf7 select {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.5em 1em;
+    height: 3em;
+    color: #4a545a;
+    border: 2px solid #e8e8e8;
+    border-radius: 3px;
+    background: #ffffff;
+    box-shadow: none;
+    margin-top: 10px;
+    box-sizing: border-box;
+    -webkit-transition: .07s ease-in-out;
+    transition: .07s ease-in-out;
+}
+.contact-form-cf7 form.wpcf7-form {
+    background: transparent;
+    border: 0;
+}
+.wpcf7 input[type="text"]:focus,
+.wpcf7 input[type="email"]:focus,
+.wpcf7 textarea:focus,
+.wpcf7 input[type="password"]:focus,
+.wpcf7 select:focus {
+    color: #4a545a;
+    border-top-color: #d5e0e8;
+    border-left-color: #DDE7EF;
+    outline: none;
+    background: #F1F5F9;
+    -webkit-transition: .07s ease-in-out;
+    transition: .07s ease-in-out;
+}
+/* Input Field's Placeholder Styling */
+
+.wpcf7::-webkit-input-placeholder {
+    color: #8496A0;
+}
+.wpcf7:-moz-placeholder {
+    /* Firefox 18- */
+    
+    color: #8496A0;
+}
+.wpcf7::-moz-placeholder {
+    /* Firefox 19+ */
+    
+    color: #8496A0;
+}
+.wpcf7:-ms-input-placeholder {
+    color: #8496A0;
+}
+/* Select Field */
+
+.wpcf7 select {
+    height: 2.7em;
+    min-height: 2.8em;
+    position: relative;
+    /*-webkit-appearance: none;
+    -moz-appearance: window;*/
+}
+.wpcf7 select:focus {
+    outline: none;
+}
+@media only screen and (max-width: 600px) {
+    .wpcf7 select {
+        min-height: 2.5em;
+        height: 2.5em;
+    }
+}
+.wpcf7-select:after {
+    position: absolute;
+    font-family: dashicons;
+    content: "\f347";
+    color: #4A545A;
+    right: 15px;
+    top: .6em;
+    pointer-events: none;
+}
+@media only screen and (max-width: 600px) {
+    .wpcf7-select:after {
+        top: .5em;
+    }
+}
+/* Checkboxes and Radio Fields */
+
+.wpcf7 input[type="checkbox"],
+.wpcf7 input[type=radio] {
+    border-radius: 2px;
+    background: #E9EEF2;
+    color: #555;
+    clear: none;
+    cursor: pointer;
+    display: inline-block;
+    border: 1px solid #dedede;
+    line-height: 0;
+    height: 18px;
+    margin: -3px 4px 0 0;
+    outline: 0;
+    padding: 0 !important;
+    text-align: center;
+    vertical-align: middle;
+    width: 18px;
+    min-width: 18px;
+    -webkit-appearance: none;
+    -webkit-transition: .05s border-color ease-in-out;
+    transition: .05s border-color ease-in-out;
+}
+.wpcf7 input[type=radio] {
+    border-radius: 20px;
+}
+.wpcf7 input[type=checkbox]:checked,
+.wpcf7 input[type=radio]:checked {
+    background: #37BF91;
+}
+.wpcf7 input[type=checkbox]:checked:before,
+.wpcf7 input[type=radio]:checked:before {
+    float: left;
+    color: #fff;
+    font-size: 13px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    margin-top: 9px;
+    margin-left: 0;
+    font-family: dashicons;
+    content: "\f147";
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+/* Success message in contact form */
+
+.wpcf7-valid-tip {
+    color: green;
+}
+form.wpcf7-form {
+    border: 2px solid #f4f4f4;
+    background: #fcfcfc;
+}
+.ast-header-break-point li.ast-masthead-custom-menu-items {
+    border-bottom: 1px solid #dadada;
+}
+.ast-header-break-point .get-pro-button-wrap > .get-pro-button {
+    margin: 10px auto;
+}
+.ast-transparent-header .get-pro-button-wrap .get-pro-button a {
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 6px 22px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: all .3s linear;
+    margin-left: 18px;
+}
+.blog .get-pro-button-wrap .get-pro-button a,
+.single .get-pro-button-wrap .get-pro-button a,
+.error404 .get-pro-button-wrap .get-pro-button a {
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 6px 22px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: all .3s linear;
+    margin-left: 18px;
+}
+.blog .get-pro-button-wrap .get-pro-button a:hover,
+.single .get-pro-button-wrap .get-pro-button a:hover,
+.error404 .get-pro-button-wrap .get-pro-button a:hover {
+    background-color: #fff;
+    color: #333!important;
+}
+.get-pro-button-wrap .get-pro-button a:hover {
+    background-color: #ffffff;
+    color: #333333 !important;
+}
+.ast-header-break-point .main-header-bar-navigation.toggle-on + .get-pro-button-wrap {
+    display: block;
+}
+.ast-header-break-point li.ast-masthead-custom-menu-items {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.ast-header-break-point li.ast-masthead-custom-menu-items .download-button a {
+    text-decoration: none;
+}
+.uabb-testimonial {
+    padding: 20px 20px !important;
+}
+.giveaway-infobox .fl-col-small {
+    -webkit-box-shadow: 0px 7px 38px 0px rgba(226, 221, 226, 0.41);
+    -moz-box-shadow: 0px 7px 38px 0px rgba(226, 221, 226, 0.41);
+    box-shadow: 0px 7px 38px 0px rgba(226, 221, 226, 0.41);
+    border-radius: 10px;
+    border: 1px solid rgba(204, 204, 204, 0.23);
+    width: 30%;
+    margin: 18px 18px;
+    padding: 16px 0px;
+}
+.giveaway_button {
+    background: rgba(0, 0, 0, 0) -webkit-linear-gradient(left, #ee0f6f 0%, #f89482 100%) repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) linear-gradient(to right, #ee0f6f 0%, #f89482 100%) repeat scroll 0 0;
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    width: 170px;
+    height: 46px;
+    text-align: center !important;
+    line-height: 46px !important;
+    color: #fff !important;
+    border-radius: 4px;
+    font-size: 17px !important;
+    font-weight: 500 !important;
+    margin: 0px auto !important;
+}
+.price_page .uabb-pricing-table-outter-1 .uabb-creative-button-wrap a {
+    background: rgba(0, 0, 0, 0) -webkit-linear-gradient(left, #ee0f6f 0%, #f89482 100%) repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) linear-gradient(to right, #ee0f6f 0%, #f89482 100%) repeat scroll 0 0 !important;
+    border: 0px !important;
+}
+/* Extra Margin Above Blog Meta */
+
+.entry-meta {
+    margin-top: 1em;
+}
+@media( max-width:768px) {
+    .astra-advanced-hook-21480 h3 {
+        text-align: center !important;
+    }
+}
+#wpcf7-f22759-p22756-o1 form,
+#wpcf7-f22759-p22756-o1 table,
+#wpcf7-f22759-p22756-o1 table tr,
+#wpcf7-f22759-p22756-o1 table tr td {
+    border: 0;
+}
+.ast-suggestion-form .uabb-cf7-style {
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.05);
+}
+.ast-suggestion-form .wpcf7-form {
+    background: #ffffff;
+}
+.ast-suggestion-form input[type="text"],
+.ast-suggestion-form input[type="email"],
+.ast-suggestion-form textarea {
+    border: 1px solid #eeeeee !important;
+    border-radius: 0px;
+}
+.ast-suggestion-form .uabb-cf7-style textarea {
+    height: 120px !important;
+}
+.ast-suggestion-form input[type="text"]:focus,
+.ast-suggestion-form input[type="email"]:focus,
+.ast-suggestion-form textarea:focus {
+    background: #f4f4f7 !important;
+    border: 1px solid #eeeeee !important;
+}
+.ast-suggestion-form input::-webkit-input-placeholder,
+.ast-suggestion-form textarea::-webkit-input-placeholder {
+    color: #bbbbbb !important;
+    font-weight: 100;
+}
+.ast-suggestion-form form.wpcf7-form {
+    padding: 2rem;
+}
+
+/* Pricing Page CSS */
+
+@media screen and (min-width: 769px) {
+    .both-prices .col-shadow1 {
+        box-shadow: 0px 2px 40px #eae7f1;
+        border-radius: 6px;
+        padding: 0px 34px;
+        background: #fff;
+        margin-right: 30px;
+        position: relative;
+        padding: 0px 33px;
+        width: calc(29% - 30px) !important;
+    }
+    .both-prices .col-shadow2 {
+        box-shadow: 0px 2px 40px #eae7f1;
+        border-radius: 6px;
+        padding: 0px 34px;
+        background: #fff;
+        margin-right: 30px;
+        position: relative;
+        padding: 0px 33px;
+        width: calc(35.50% - 30px) !important;
+    }
+    .both-prices .col-shadow3 {
+        box-shadow: 0px 2px 40px #eae7f1;
+        border-radius: 6px;
+        padding: 0px 34px;
+        background: #fff;
+        margin-right: 30px;
+        position: relative;
+        padding: 0px 33px;
+        width: calc(35.50% - 30px) !important;
+    }
+}
+@media screen and (max-width: 768px) {
+    .both-prices .col-shadow1 {
+        box-shadow: 0px 2px 40px #eae7f1;
+        border-radius: 6px;
+        position: relative;
+        width: auto !important;
+        background: #fff;
+        margin-bottom: 38px;
+    }
+    .both-prices .col-shadow2 {
+        box-shadow: 0px 2px 40px #eae7f1;
+        border-radius: 6px;
+        position: relative;
+        width: auto !important;
+        background: #fff;
+        margin-bottom: 38px;
+    }
+    .both-prices .col-shadow3 {
+        box-shadow: 0px 2px 40px #eae7f1;
+        border-radius: 6px;
+        position: relative;
+        width: auto !important;
+        background: #fff;
+        margin-bottom: 38px;
+    }
+    
+}
+@media screen and (max-width: 667px){
+    .both-prices .col-shadow1, 
+    .both-prices .col-shadow2, 
+    .both-prices .col-shadow3 {
+     
+        margin: 38px;
+    }
+}
+.both-prices .pro-btn .uabb-creative-button-wrap a {
+    text-decoration: underline;
+}
+.both-prices .agency-btn .uabb-creative-button-wrap a {
+    text-decoration: underline;
+}
+.both-prices .pro-btn .uabb-creative-button-wrap a:hover {
+    text-decoration: underline;
+}
+.both-prices .agency-btn .uabb-creative-button-wrap a:hover {
+    text-decoration: underline;
+}
+.both-prices .most_popular {
+    background-color: #25ae57;
+    color: #fff;
+    font-weight: 600;
+    font-size: 13px;
+    padding-top: 22px;
+    text-align: center;
+    line-height: 16px;
+    border-radius: 80px;
+    box-shadow: 0px 5px 20px #e0d3f7;
+    height: 76px;
+    width: 76px;
+    position: absolute;
+    top: -22px;
+    right: -28px;
+    ;
+}
+.both-prices .guarantee_design {
+    background: #676172;
+    border-radius: 6px;
+}
+.btn_shadow1 .uabb-creative-button-wrap a {
+    box-shadow: 0px 5px 20px #d6dee4;
+    transition: all .5s ease;
+}
+.btn_shadow1 .uabb-creative-button-wrap a:hover {
+    box-shadow: 0px 10px 26px #d6cfe2;
+}
+.btn_shadow2 .uabb-creative-button-wrap a {
+    box-shadow: 0px 5px 20px #d6dee4;
+    transition: all .5s ease;
+}
+.btn_shadow2 .uabb-creative-button-wrap a:hover {
+    box-shadow: 0px 10px 26px #e5e1ef;
+}
+.both-prices .price_discount {
+    text-decoration: line-through;
+    font-size: 32px;
+    color: #cbc6d4;
+    font-weight: 400;
+    padding-right: 8px;
+}
+.cm_soon {
+    color: #b2acbf;
+    font-size: 0.7em;
+    padding: 0.18em 0.50em;
+    margin-left: 7px;
+    border: 1px solid #d0cdd8;
+    border-radius: 2px;
+}
+.Zebra_Tooltip .Zebra_Tooltip_Message {
+   font-size: 14px;
+    line-height: 24px;
+    box-shadow: none;
+    font-family: Poppins;
+}
+@media screen and (max-width: 768px) {
+    .ast-transparent-header .get-pro-button-wrap .get-pro-button a {
+    margin-left: 0px;
+}
+    .both-prices .uabb-creative-button-wrap.uabb-creative-button-reponsive-left {
+    text-align: left !important;
+}
+}
+.price_discount {
+    text-decoration: line-through;
+    font-size: 48px !important;
+    color: #cccfd2;
+    padding-right: 8px;
+    font-weight: 400;
+}
+.cp-target.cp-field-element.cp-countdown.is-countdown > :first-child {
+    display: none !important;
+}
+ol.toolset-list li {
+    padding-left: 0.7em;
+}
+table.astra-table-data td {
+    width: 33.33%;
+}
+.astra-table-data-2 td {
+    width:50%;
+}
+table.astra-table-border-none td:first-child {
+    width: 70%;
+    border: 0;
+      vertical-align: middle;
+}
+.astra-table-border-none tr, 
+.astra-table-border-none td, 
+table.astra-table-border-none {
+    border: 0 !important;
+}
+img.first-image {
+    margin-top: -20px;
+}
+
+/* Code Styling */
+code {
+    display: inline-block;
+    padding: .2rem .4rem;
+    font-size: 90%;
+    color: #bd4147;
+    background-color: #f7f7f9;
+    border-radius: .25rem;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    line-height: 22px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+#masthead .site-logo-img img {
+    width: 155px !important;
+}
+
+/* Text below single docs */
+.text-below-single-docs {
+    border-top: 1px solid #e6e6e6;
+    padding: 25px 0;
+    margin: 3em 0 2em;
+    font-style: italic;
+}
+
+
+/* Custom CSS from Customizer */
+
+@media screen and (min-width: 900px) {
+     .testimonial_section .uabb-photo-content {
+         position: absolute;
+         bottom: -6px;
+         right: -0.2%;
+         transform: translate(3%,3%);
+    }
+}
+.targetFeature h2.uabb-infobox-title {
+    position: relative;
+}
+.pro_feature {
+    font-size: 13px;
+    font-weight: 400;
+    color: #ee79ff !important;
+    position: relative;
+    top: -12px;
+    left: 9px;
+}
+
+.pro_feature_style {
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    color: #ee79ff !important;
+    font-family: Poppins;
+    right: 0;
+    top: -28px;
+	 text-transform:uppercase;
+}
+/* SVG logo firefox */
+ .firefox #masthead .site-logo-img img {
+     max-height: 45px;
+}
+/* WooCommerce Addon Post IMG Shadow */
+ .post-23760 img {
+     box-shadow: 0px 5px 40px -7px rgba(22, 35, 49, 0.22);
+	   margin-bottom: 15px;
+}
+
+.testimonial_section .fl-col-has-cols {
+    background: #FEFDFF !important;
+    border-radius: 10px;
+    margin-top: -130px;
+}
+#testimonial_section .fl-col-has-cols {
+    background: #FBFAFD !important;
+    border-radius: 10px;
+    margin-top: -130px;
+}
+p.screenshot-section input {
+    height: auto !important;
+}
+@media only screen and (max-width: 768px)
+{
+	.soacial_align, iframe 
+	{
+		margin: 0px auto;
+		display: block;
+	}
+}
+
+.docs-single-main .entry-content h2 {
+text-transform: uppercase;
+font-family: Poppins;
+font-size: 1.8em;
+border-bottom: dotted 1px #efefef;
+padding-bottom:0.3em;
+}
+
+
+.docs-single-main .entry-content h3 {
+text-transform: uppercase;
+border-bottom: dotted 1px #efefef;
+padding-bottom:0.3em;
+    }
+
+h4 {
+    font-weight: 500 !important;
+    }
+
+strong {
+    font-weight: 500 !important;
+}
+/*Docs Light Box*/
+#slb_viewer_wrap .slb_theme_slb_default .slb_container {
+    border-radius: 0 !important;
+}
+#slb_viewer_wrap .slb_theme_slb_default .slb_data_title, 
+#slb_viewer_wrap .slb_theme_slb_default .slb_group_status {
+    font-family: inherit !important;
+    font-size: 1.8em !important;
+}
+#slb_viewer_wrap .slb_theme_slb_default .slb_details {
+	padding: 0.5em 1em !important;
+	line-height: 1.3 !important;
+}
+.slb_details {
+    display: none;
+}
+
+/* Sidebar Banner start*/
+.astra-banner-wrap {
+    border-radius: 6px;
+    border: 0px solid rgb(0, 0, 0);
+    background-image: -webkit-radial-gradient(center bottom, circle cover, #ffffff 0%, #EBDDFF 100%);
+    background-color: rgb(161, 98, 249);
+    background-position: 0px 0px;
+    background-size: calc(100% + 0px) calc(100% + 0px);
+    transform: rotate(0deg) scale(1, 1);
+    opacity: 1;
+}
+
+.astra-banner-wrap h3 {
+    color: #333333;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.4;
+    letter-spacing: 0px;
+    text-transform: none;
+    text-decoration: none;
+}
+.astra-banner-content {
+    padding: 40px 15px;
+}
+.astra-logo {
+    text-align: center;
+    margin-bottom: 25px;
+}
+.astra-banner-footer {
+    border-radius: 6px;
+    border: 0px solid rgb(0, 0, 0);
+    background-color: #35266C;
+    transform: rotate(0deg) scale(1, 1);
+}
+
+.astra-banner-footer a {
+    box-shadow: rgba(0, 56, 132, 0.16) 0px 7px 40px 0px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: #EE4A03;
+    border: 0px solid rgb(12, 83, 183);
+    opacity: 1;
+    width: 252px;
+    height: 59px;
+    padding: 15px 40px;
+    border-radius: 4px;
+}
+.astra-banner-footer {
+    text-align: center;
+    padding: 40px 20px;
+}
+.blog aside#recent-posts-2 li {
+    border-top: 1px solid #f1f1f1;
+    line-height: 1.7;
+    padding: 20px 0px 15px;
+    font-family: Poppins;
+}
+.sidebar-main #custom_html-2 {
+    padding: 0px !important;
+}
+.astra-banner-footer:hover a {
+    color: #ffffff;
+}
+/* Sidebar Banner end */
+
+/* Add custom width to changelogs */
+.tax-product.term-astra-theme .site-content > .ast-container,
+.tax-product.term-astra-pro-addon .site-content > .ast-container,
+.tax-product.term-astra-sites-plugin .site-content > .ast-container {
+    max-width: 900px;
+}
+.list-align ul
+{
+	margin-left: 20px;
+}
+.list-align ul li
+{
+	float: left;
+	margin-right: 40px;
+  text-indent: -5px;
+}
+.bundle_list_align .fl-builder-module-template {
+
+    padding: 0px;
+}
+.selected h3.uabb-infobox-title {
+    color: #EE7FFF !important;
+}
+.selected .uabb-icon i:before {
+    color: #EE7FFF !important;
+}
+.selected:hover .uabb-icon i:before {
+    color: #EE7FFF !important;
+}
+
+.cp_style_25478 .cp-target strong{
+	    font-weight: 700 !important;
+}
+.blog .astra-advanced-hook-21480 .fl-row-content-wrap,
+.single-post .astra-advanced-hook-21480 .fl-row-content-wrap {
+    background: #fff;
+}
+
+/*Default font icon list in Astra- document icon list*/
+
+.docs-single-templates-enabled .ast-default-font-doc [class^="astra-icon-"], [class*=" astra-icon-"] {
+    font-family: 'Astra' !important;
+    font-size: 20px;
+
+}
+.ast-default-font-doc .astra-icon-down_arrow:before {
+    content: "\e900";
+}
+.ast-default-font-doc .astra-icon-close:before {
+    content: "\e5cd";
+}
+.ast-default-font-doc .astra-icon-drag_handle:before {
+    content: "\e25d";
+}
+.ast-default-font-doc .astra-icon-format_align_justify:before {
+    content: "\e235";
+}
+.ast-default-font-doc .astra-icon-menu:before {
+    content: "\e5d2";
+}
+.ast-default-font-doc .astra-icon-reorder:before {
+    content: "\e8fe";
+}
+.ast-default-font-doc .astra-icon-search:before {
+    content: "\e8b6";
+}
+.ast-default-font-doc .astra-icon-zoom_in:before {
+    content: "\e56b";
+}
+.ast-default-font-doc .astra-icon-check-circle:before {
+    content: "\e901";
+}
+.ast-default-font-doc .astra-icon-shopping-cart:before {
+    content: "\f07a";
+}
+.ast-default-font-doc .astra-icon-shopping-bag:before {
+    content: "\f290";
+}
+.ast-default-font-doc .astra-icon-shopping-basket:before {
+    content: "\f291";
+}
+.ast-default-font-doc .astra-icon-circle-o:before {
+    content: "\e903";
+}
+.ast-default-font-doc .astra-icon-certificate:before {
+    content: "\e902";
+}
+.ast-default-font-doc table.contentTable{
+  width: 75%;
+  text-align: left;
+}
+/* Single Docs Link Icons*/
+.single-docs .dashicons.dashicons-paperclip {
+    visibility: hidden;
+}
+
+.single-docs .astra-automatic-anchors {
+    margin-left: -25px;
+}
+
+.single-docs .astra-automatic-anchors:hover .dashicons.dashicons-paperclip {
+    visibility: visible;
+}
+@media(max-width:768px) {
+  img.celibration-img {
+    width: 45px;
+    top: -50px;
+    position: absolute;
+    text-align: center;
+    transform: translate(-50%);
+    left: 50%;
+  }
+}
+/*Default font icon list in Astra- document icon list END*/
+
+
+/* Elementor vs SiteOrigin Page Builder Post Table CSS */
+.elementor-site-origin-table-first,
+.elementor-site-origin-table-second {
+	border: 1px solid #e5e5e5 !important;
+  border-right: 0 !important;
+  border-bottom: 0 !important;	
+}
+
+.tablepress.elementor-site-origin-table thead th {
+	background-color: #f0f0f0;
+	color: #EC4646;
+}
+
+.tablepress.elementor-site-origin-table .odd td {
+	background-color: #f7f7f7;
+}
+
+.tablepress.elementor-site-origin-table .column-1,
+.tablepress.elementor-site-origin-table .column-2 {
+	border-right: 1px solid #e5e5e5 !important;
+}
+.tablepress.elementor-site-origin-table .row-hover tr:hover td {
+    background-color: #f3f3f3;
+}
+@media(min-width:993px) {
+
+	.elementor-site-origin-table-first .column-1,
+	.elementor-site-origin-table-second .column-1 {
+		width: 35%;
+	}
+
+}
+/* Single blox post button */
+.astBlogButton {
+    font-size: 17px;
+    line-height: 1em;
+    letter-spacing: 0.2px;
+    color: #fff;
+    background-color: #9383fc;
+    border-radius: 50px;
+    width: 150px;
+    text-align: center;
+    padding: 13px 30px;
+    margin: 15px 0;
+    display: block;
+}
+.astBlogButton:hover {
+        box-shadow: 0 10px 36px -6px rgba(22, 35, 49, 0.25);
+	background-color: #f2295b;
+	color:#fff;
+}
+
+/* Elementor vs SiteOrigin Page Builder Post Table CSS End */
+/* Astra Pro Page CSS Start */
+.coming_soon.comming-soon-center {
+    text-align: center;
+    margin: 7px auto 0px auto;
+}
+/* Astra Pro Page CSS End */
+input#copyTarget, input#copyTarget1, input#copyTarget2 {
+    pointer-events: none;
+    user-select: none !IMPORTANT;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*Responsive fix Pricing*/
+@media(min-width:769px ) and (max-width: 1236px) {
+    .bsf-astra-price .uabb-infobox-title-prefix {
+        font-size: 20px !important;
+    }
+    .pricing-page-second .fl-node-content {
+        margin: 0 15px 6px !important;
+    }
+    .addon-selection-outer-section .fl-module-content {
+        margin: 0 20px !important;
+    }
+    .addon-selection-outer-section label.tooltip.tooltipstered {
+        display: contents !important;
+    }
+    .addon-selection-outer-section #uabb-radio,
+    .addon-selection-outer-section #uael-radio {
+        margin-bottom: 0 !important;
+    }
+    .addon-selection-outer-section #uael-radio  {
+        margin-top:20px;
+    }
+    .mini-agency-btn .fl-module-content,
+    .agency-btn .fl-module-content,
+    .bsf-astra-pro .fl-module-content { 
+        margin-left: 20px !important;
+    }
+}
+
+.updated:not(.published) {
+display: inline-block !important;
+}
+ 
+.posted-on .published {
+display: none;
+}

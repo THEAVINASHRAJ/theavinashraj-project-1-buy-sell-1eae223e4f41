@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+            integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+            crossorigin="anonymous">
+        <script src="jquery.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script>
+            var x = document.getElementById("demo");
+            function getLocation() {
+                if (navigator.geolocation) {
+                    navigator
+                        .geolocation
+                        .getCurrentPosition(showPosition);
+                } else {
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                }
+            }
+            function showPosition(position) {
+                x.innerHTML = "Latitude: " + position.coords.latitude + "<br/>Longitude: " +
+                        position.coords.longitude;
+            }
+        </script>
+        <style>
+            a:link {
+                color: #cc0000;
+            }
+            a:visited {
+                color: #bf17c5;
+            }
+            a:hover {
+                color: #10cf96;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- <div class="col-md-12"> <div style="margin-top:0px; margin-left:85%;
+                    float-right;">Select Language |<a href="">English</a><a href="">| Hindi</a>
+                    </div> </div> -->
+
+                    <div
+                        class="row"
+                        style="height:200px; background: linear-gradient(to bottom ,rgb(151, 223, 245),rgb(12, 235, 223),rgb(74, 112, 238),rgb(161, 195, 218))">
+                        <!-- style="background:url('handymanpic/bs2.jpg'); background-size:100% 100%;">
+                        -->
+                        <div class="col-md-12">
+                            <div class="col-md-2 mt-3" style="float:left; ">
+                                <img src="handymanpic/olx.png" style="width:80px; height:75px;"> <br/>
+                                <!-- <div style="float:left;">  -->
+                                    <strong style="font-size:20px;">India</strong>
+                                <!-- </div> -->
+                            </div>
+                            <div class="col-md-4 mt-2" style="float:left; ">
+                                <h1>
+                                    <strong style="font-size-adjust: initial; color: rgb(43, 0, 143);">Handy Man</strong>
+                                </h1>
+                                <label style="font-style: oblique;">world's largest marketplace</label>
+                            </div>
+                            <div class="col-md-2"></div>
+                            <div class="col-md-4" style="float:right;  padding-right:30px; ">
+                                <div class="" style="float:right; font-size:20px;">
+                                    <a href="user.html">
+                                        <i class="far fa-user-circle"></i>
+                                        <strong>
+                                            Avinash raj</strong>
+                                    </a>
+                                </div>
+                                <button
+                                    class="button text-light"
+                                    style="width:350px; height:12mm; margin-top:50px; margin-left:20%; font-size:20px; border-radius:12px; background:linear-gradient(rgb(230, 238, 188),rgb(231, 157, 147)) ">
+                                    <a href="submitad.html">submit a free ad</a>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <span class="col-md-3">
+                                <input
+                                    type="text"
+                                    id="demo"
+                                    placeholder="Enter your location"
+                                    style="width:23%; height:12mm; border-radius:12px; text-indent: 20px; margin-left:15px; float:left;"></span>
+                            <span class="col-md-6">
+                                <input
+                                    type="text"
+                                    placeholder="search"
+                                    style="width:53%; height:12mm; float:left; border-radius:12px; text-indent:20px; margin-left:20px;"></span>
+                            <span class="col-md-3 mt-0">
+                                <button
+                                    class="button btn-round btn-danger text-light"
+                                    button="button"
+                                    onclick="getLocation()"
+                                    style="width:14%; height:12mm; float:left; border-radius:12px; margin-left:20px; font-size:20px;">Search</button>
+                            </span>
+
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-12"><a href=""><img src="handymanpic/ad.png"
+                    style="width:100%; height:300px; margin-top:15px;"></a></div> -->
+                    <div class="col-md-12 mt-3">
+                        <div class="carousel slide" data-ride="carousel" id="slider">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="handymanpic/bs2.jpg" style="width:100%; height:400px;"/>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="handymanpic/bs1.jpg" style="width:100%; height:400px;"/>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                                 
+
+                    
+                    <div class="col-md-12 mt-2">
+                        <div class='row'>
+                            <div
+                                class="col-md-8"
+                                style=" height:550px; border-radius:12px; float:left; 
+                                background: linear-gradient(to bottom ,rgb(158, 249, 255),rgba(101, 250, 188, 0.459),rgb(255, 255, 255),rgba(0, 140, 255, 0.267),rgb(250, 250, 250),rgba(242, 243, 153, 0.514),rgb(19, 116, 180));">
+                                <div class='row'>
+                                    <div class="col-md-12 pt-5">
+                                        <div class="col-3" style="float:left;">
+                                            <a href="property.html"><img src="handymanpic/2a.png" style=" height:150px; border-radius:20px;">
+                                            </a>
+                                        </div>
+                                        <div class="col-3" style="float:left;">
+                                            <a href="car.html"><img src="handymanpic/2b.png" style=" height:150px; border-radius:20px;"></a>
+                                        </div>
+                                        <div class="col-3" style="float:left;">
+                                            <a href="furniture.html"><img
+                                                src="handymanpic/2c.png"
+                                                style="width:80%; height:150px; border-radius:20px;"></a>
+                                        </div>
+                                        <div class="col-3" style="float:right;">
+                                            <a href="job.html"><img
+                                                src="handymanpic/2d.png"
+                                                style="width:80%; height:150px; border-radius:20px;"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="col-3" style="float:left;">
+                                            <a href="electronics.html"><img
+                                                src="handymanpic/2e.png"
+                                                style="width:80%; height:150px; border-radius:20px;"></a>
+                                        </div>
+                                        <div class="col-3" style="float:left;">
+                                            <a href="mobile.html"><img
+                                                src="handymanpic/2f.png"
+                                                style="width:80%; height:150px; border-radius:20px;"></a>
+                                        </div>
+                                        <div class="col-3" style="float:left;">
+                                            <a href="bike.html"><img
+                                                src="handymanpic/2g.png"
+                                                style="width:80%; height:150px; border-radius:20px;"></a>
+                                        </div>
+                                        <div class="col-3" style="float:right;">
+                                            <a href="book.html"><img
+                                                src="handymanpic/2h.png"
+                                                style="width:80%; height:150px; border-radius:20px;"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="col-3" style="float:left;">
+                                            <a href="faishon.html"><img
+                                                src="handymanpic/2i.png"
+                                                style="width:80%; height:150px; border-radius:20px;"></a>
+                                        </div>
+                                        <div class="col-3" style="float:left;">
+                                            <a href="pet.html"><img
+                                                src="handymanpic/2j.png"
+                                                style="width:80%; height:150px; border-radius:20px;"></a>
+                                        </div>
+                                        <div class="col-3" style="float:left;">
+                                            <a href="service.html"><img
+                                                src="handymanpic/2k.png"
+                                                style="width:80%; height:150px; border-radius:20px;"></a>
+                                        </div>
+                                        <div class="col-3" style="float:left;">
+                                            <a href="user.html"><img
+                                                src="handymanpic/m.png"
+                                                style="width:80%; height:150px; border-radius:20px;"></a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-md-4 pl-5"
+                                style="float:right; height:550px; border-radius:15px; border-left: 2px solid #fff;
+                                 background: linear-gradient(to bottom ,rgb(158, 249, 255),rgba(101, 250, 188, 0.459),rgb(255, 255, 255),rgba(0, 140, 255, 0.267),rgb(250, 250, 250),rgba(242, 243, 153, 0.514),rgb(19, 116, 180));">
+                                <a href="user.html"><img
+                                    src="handymanpic/ad1.png"
+                                    style="width:90%; margin-top:10px; height:380px;"></a>
+                                <a
+                                    href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwi67LHu3LjeAhVatpYKHcsNDL4YABAAGgJ0bA&ohost=www.google.co.in&cid=CAESEeD2GOnpYZq0TKNmGSshFRjz&sig=AOD64_111QruhAPfZuANYDJ1dEgrVK1rgA&q=&ved=2ahUKEwjDkKru3LjeAhWHfysKHT_xBTEQ0Qx6BAgMEAE&adurl=">
+                                    <img
+                                        src="handymanpic/ad2.jpg"
+                                        style="width:90%; height:140px; border-top:2px solid rgba(15, 15, 15, 0.836);  margin-top:10px;"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- bottom portion -->
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h2 class="mt-3" style="color:rgb(99, 247, 0); font-family:cursive; text-shadow: rgb(39, 39, 37);">Our 6 major offline stores</h2>
+                            <div class="row mt-4">
+                                <div class="col-md-4 mx-auto">
+                                    <button class="btn btn-outline-warning mx-2" style="width:90%;">
+                                        <i class="fas fa-city h1 text-danger my-3"></i>
+                                        <div>
+                                            <strong>Dehli</strong>
+                                        </div>
+                                        <div style=" margin-bottom: 28px;">Lorem ipsum, dolor sit amet consectetur adipisicing <br/> elit. V d, cum quibusdam.</div>
+                                    </button>
+                                </div>
+                                <div class="col-md-4 mx-auto">
+                                    <button class="btn btn-outline-warning" style="width:90%;">
+                                        <i class="fas fa-city h1 text-danger my-3"></i>
+                                        <div>
+                                            <strong>Kolkata</strong>
+                                        </div>
+                                        <div style=" margin-bottom: 28px;">Lorem ipsum, dolor sit amet consectetur adipisicing <br/> elit. V d, cum quibusdam.</div>
+                                    </button>
+                                </div>
+                                <div class="col-md-4 mx-auto">
+                                    <button class="btn btn-outline-warning" style="width:90%;">
+                                        <i class="fas fa-city h1 text-danger my-3"></i>
+                                        <div>
+                                            <strong>patna</strong>
+                                        </div>
+                                        <div style=" margin-bottom: 28px;">Lorem ipsum, dolor sit amet consectetur adipisicing <br/> elit. V d, cum quibusdam.</div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <br/>
+                
+                        <div class="col-md-12 text-center">
+                            <div class="row my-4">
+                                <div class="col-md-4 mx-auto ">
+                                    <button class="btn btn-outline-warning mx-2" style="width:90%;">
+                                        <i class="fas fa-city h1 text-danger my-3"></i>
+                                        <div>
+                                            <strong>Chandigarh</strong>
+                                        </div>
+                                        <div style=" margin-bottom: 28px;">Lorem ipsum, dolor sit amet consectetur adipisicing <br/> elit. V d, cum quibusdam.</div>
+                                    </button>
+                                </div>
+                                <div class="col-md-4 mx-auto ">
+                                    <button class="btn btn-outline-warning" style="width:90%;">
+                                        <i class="fas fa-city h1 text-danger my-3"></i>
+                                        <div>
+                                            <strong>Hydrabad</strong>
+                                        </div>
+                                        <div style=" margin-bottom: 28px;">Lorem ipsum, dolor sit amet consectetur adipisicing <br/> elit. V d, cum quibusdam.</div>
+                                    </button>
+                                </div>
+                                <div class="col-md-4 mx-auto">
+                                    <button class="btn btn-outline-warning mx-" style="width:90%;">
+                                        <i class="fas fa-city h1 text-danger my-3"></i>
+                                        <div>
+                                            <strong>Chennai</strong>
+                                        </div>
+                                        <div style=" margin-bottom: 28px;"> Lorem ipsum, dolor sit amet consectetur adipisicing <br/> elit. V d, cum quibusdam.</div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                
+                    </div>
+                    <div class="row">
+                    <div class="col-md-12">
+                        <a href=""><img
+                            src="handymanpic/ad4.jpg"
+                            style="width:100%; height:200px; margin-top:15px; border-bottom:5px solid #bf17c5;"></a>
+                    </div>
+
+                    <div
+                        class="col-md-12"
+                        style="height:150px; border-bottom:5px solid #181618; background: linear-gradient(to bottom , rgb(180, 255, 145),rgb(221, 253, 252),rgb(139, 143, 158),rgb(206, 230, 103));">
+                        <div class="col-md-2" style="float:left; margin-top:16px;">
+                            <img
+                                src="handymanpic/olx.png"
+                                style="width:80px; height:75px; margin-top:30px; margin-left:30px;">
+                            <div style="margin-left:30px; padding-left:15px;">
+                                <strong style="font-size:20px;">India</strong>
+                            </div>
+                        </div>
+                        <div class="col-md-2" style="font-size:15px; float:left; margin-top:26px; ">
+                            <div class="text-light">
+                                <a href="user.html">Locations Map</a>
+                            </div>
+                            <div class="text-light">
+                                <a href="user.html">Popular Searches</a>
+                            </div>
+                            <div class="text-light">
+                                <a href="user.html">Achive</a>
+                            </div>
+                            <div class="text-light">
+                                <a href="user.html">Site map</a>
+                            </div>
+                            <div class="text-light">
+                                <a href="user.html">feautre ad</a>
+                            </div>
+                        </div>
+                        <div class="col-md-2" style="float:left; margin-top:26px;">
+                            <div class="text-light">
+                                <a href="user.html">Term of use</a>
+                            </div>
+                            <div class="text-light">
+                                <a href="user.html">Help & contact us</a>
+                            </div>
+                        </div>
+                        <div class="col-md-2" style="float:left; margin-top:26px;">
+                            <div class="text-light">
+                                <a href="login.html">login</a>
+                            </div>
+                            <div class="text-light">
+                                <a href="login1.html">sign up</a>
+                            </div>
+                            <div class="text-light">
+                                <a href="signout.html">sign out</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 pl-1" style="float:left; font-size:50px;">
+                            <div class="pl-4" style="padding-top:30px;  font-size:15px;">
+                                <strong>Contact with us</strong>
+                            </div>
+                            <a href="https://www.fb.com/imtheavinasraj">
+                                <i class="fab fa-facebook-square "></i>
+                            </a>
+                            <a href="https://www.googleplus.com/theavinashraj">
+                                <i class="fab fa-google-plus-square "></i>
+                                <a href="https://www.twitter.com/theavinashraj">
+                                    <i class="fab fa-twitter-square "></i>
+                                </a>
+                                <a href="https://www.instagram.com/theavinashraj">
+                                    <i class="fab fa-instagram "></i>
+                                </a>
+                            </div>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </html>

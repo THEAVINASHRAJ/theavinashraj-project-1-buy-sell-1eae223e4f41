@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/bootstrap.css"/>
+        <script src="jquery.js"></script>
+        <script src="js/bootstrap.js"></script>
+    </head>
+    <body class="bg-dark">
+        <style>
+            .box {
+                width: 100px;
+                height: 100px;
+                float: left;
+                background: rgb(255, 174, 0);
+                text-align: center;
+                padding-top: 60px;
+                position: relative;
+            }
+            .box1 {
+                width: 100px;
+                height: 100px;
+                float: right;
+                background: rgb(0, 255, 13);
+                text-align: center;
+                padding-top: 60px;
+                position: relative;
+            }
+        </style>
+        <script>
+            function hello() {
+                $(function () {
+                    $('.box').animate({
+                        width: '200px',
+                        height: '200px',
+                        left: '100px'
+                    }, 2000, function () {
+                        $('.box').animate({
+                            left: '500px'
+                        }, 2000, function () {
+                            $('.box').animate({
+                                top: '500px'
+                            }, 2000, function () {
+                                $('.box').animate({
+                                    left: '0px'
+                                }, 2000, function () {
+                                    $('.box').animate({
+                                        top: '0px'
+                                    }, 2000, function () {
+
+                                        $('.box').animate({
+                                            width: '50px',
+                                            height: '50px',
+                                            left: '10px'
+
+                                        }, function () {
+                                            hello();
+                                        });
+                                    });
+                                });
+                            });
+                        });
+                    });
+                });
+
+            }
+            hello();
+        </script>
+        <script>
+            function hello1() {
+                $(function () {
+                    $('.box1').animate({
+                        width: '200px',
+                        height: '200px',
+                        right: '100px'
+                    }, 2000, function () {
+                        $('.box1').animate({
+                            right: '500px'
+                        }, 2000, function () {
+                            $('.box1').animate({
+                                top: '500px'
+                            }, 2000, function () {
+                                $('.box1').animate({
+                                    right: '0px'
+                                }, 2000, function () {
+                                    $('.box1').animate({
+                                        top: '0px'
+                                    }, 2000, function () {
+
+                                        $('.box1').animate({
+                                            width: '50px',
+                                            height: '50px',
+                                            left: '10px'
+
+                                        }, function () {
+                                            hello1();
+                                        });
+                                    });
+                                });
+                            });
+                        });
+                    });
+                });
+
+            }
+            hello1();
+        </script>
+    </head>
+    <body>
+
+        <div class="box">page Under maintainence</div>
+        <div class="box1">come again later</div>
+        <div style="font-size:5ch; text-align:center; background-color: aquamarine;">Sorry for interupction!<label style="font-size:1ch; text-align:center;">page under maintainence</label>
+        </div>
+        <div
+            class="col-md-12 mx-auto mt-5 pt-4"
+            style="width:10%; height:80px; border-top-left-radius:50%; border-bottom-right-radius:50%;
+           border-bottom-left-radius:10%; border-top-right-radius:10%; text-align: center;
+          background:linear-gradient(to bottom ,orange,rgb(238, 216, 220),rgb(78, 255, 71))">
+            <a href="handyman.html">Back To Home</a>
+
+        </div>
+        <div class="col-md-12" style="margin-top:450px;">
+            <h2 style="color:azure; margin-left:40%;">work in progress</h2>
+            <div class="progress">
+                <div
+                    class="progress-bar progress-bar-striped
+                     progress-bar-animated"
+                    style="width:79%;">79%</div>
+
+            </div>
+        </body>
+    </html>
